@@ -12,7 +12,7 @@ Los integrantes de este grupo somos:
 
 *Juan Esteban Buitrago, Colombia es mi país de origen, tengo 19 años; me considero una persona curiosa con ganas de saber de todo un poco para saber resolver los problemas que la misma vida me presente. He practicado muchos deportes a lo largo de mi corta edad, tengo muchas ansias de afrontar este nuevo reto para mi y que esto traiga muchos frutos para ser alguien en la vida.
 
-*Ezequiel Poggio (sin descripcion)
+*Ezequiel Poggio, 33 años, estoy terminando la carrera de Ingeniería Mecánica y trabajo en el área de ventas para una empresa que fabrica compresores. Estoy buscando introducirme en el mundo de la programación para poder hacer algún trabajo independiente y quien te dice, cambiar de rubro en mi carrera. Soy de zona norte de Bs As. Me gusta el fútbol y la comida.
 
 *Sebastián Otero, 44 años, papa de 3 (dos varones y una nena). Soy ingeniero industrial y trabajo en una empresa que hacemos proyectos de infraestructura electrica y de saneamiento.
 
