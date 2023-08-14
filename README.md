@@ -14,7 +14,7 @@ Los integrantes de este grupo somos:
 
 *Ezequiel Poggio (sin descripcion)
 
-*Sebastián Otero (sin descripción)
+*Sebastián Otero, 44 años, papa de 3 (dos varones y una nena). Soy ingeniero industrial y trabajo en una empresa que hacemos proyectos de infraestructura electrica y de saneamiento.
 
 *Federico Borra (sin descripción)
 
