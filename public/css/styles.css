@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: RGBA(250, 110, 10, 0.5);
+    align-items: center;
+    border-bottom: 3px solid blue;
+}
+
+.divLogo {
+    display: flex;
+}
+
+.logoImg {
+    height: 60px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.logoNombre {
+    align-items: center;
+    font-family: arial;
+    color: white;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.aHeader {
+    margin: center;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: arial;
+}
