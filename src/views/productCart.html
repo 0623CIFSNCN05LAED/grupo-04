@@ -10,20 +10,53 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
     <link rel="stylesheet" href="/css/styles.css">
 
     <title>Carrito de compras</title>
 </head>
-<body class="bg-color-body">
-    <header class="bg-color-header flex-header w-h">
-        <div class="burger-menu d-block">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div>
-            <img src="" alt="logo">
-        </div>
-        <div>
-            <i class="fa-solid fa-cart-shopping"></i>
+<body>
+    <header>
+        <div id="header">
+            <div class="logo">
+            <img src="/images/logo.png" >
+            </div>  
+            <nav>
+                <form class="search" action="search.css"> 
+                    <input name="q" placeholder="Search..." type="search">
+                </form>
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Nosotros</a>
+                    <ul class="mega-dropdown">
+                        <li class="row">
+                            <ul class="mega-col">
+                                <li><a href="#">Sobre Animalandia</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>        
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Login</a>
+                        <ul>
+                            <li><a href="#">Registrarse</a></li>
+                            <li><a href="#">Iniciar Sesión</a></li>
+                        </ul>        
+                    </li>
+                        <li>
+                            <a href="">Tienda</a>
+                        </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="bg-color-main">
@@ -36,11 +69,11 @@
             </fieldset>
             <fieldset class="flex-product border-field">
                 <div class="flex">
-                    <img src="" alt="producto" class="img img-gen">
+                    <img src="../images/descarga.jpg" alt="producto" class="img img-gen">
                     <div >
-                        <img src="" alt="prod1" class="border row img-gen img-prod">
-                        <img src="" alt="prod2" class="border row img-gen img-prod">
-                        <img src="" alt="prod3" class="border row img-gen img-prod">
+                        <img src="../images/descarga.jpg" alt="prod1" class="border row-azu img-gen img-prod">
+                        <img src="../images/descarga.jpg" alt="prod2" class="border row-azu img-gen img-prod">
+                        <img src="../images/descarga.jpg" alt="prod3" class="border row-azu img-gen img-prod">
                     </div>
                     
                 </div>
@@ -58,8 +91,9 @@
                 <div class="minus">
                     <h3 class="m-envio">MEDIOS DE ENVÍO  <button class="button-home">v</button></h3>
                     <div class="hide-minus">
-                        <!-- ARREGLAR TEMA BOTON CALCULO -->
-                        <input type="text" name="postal" placeholder="Indique su código postal" class="flex form-postal"><button class="flex form-calculo">CALCULAR</button>
+                        <div class="flex">
+                            <input type="text" name="postal" placeholder="Indique su código postal" class="flex form-postal"><button class="flex form-calculo">CALCULAR</button>
+                        </div>
                         <h5 class="t-4"><a href="https://www.correoargentino.com.ar/formularios/cpa">NO SÉ MI CODIGO POSTAL</a></h5>
                     </div>
                 </div>      
@@ -83,18 +117,60 @@
             </fieldset>
         </section>
     </main>
-    <footer>
-        <!-- <section class="flex bg-color-footer">
-            <div>
-                <p>Contacto</p>
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-pad">
+                <h4>Nosotros</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Sobre Animalandia</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Trabaja con Nosotros</a></li>
+                </ul>
+              </div>
             </div>
-            <div>
-                <p>Ubicación</p>
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-pad">
+                <h4>Servicios</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Veterinaria</a></li>
+                  <li><a href="#">Peluqueria</a></li>
+                  <li><a href="#">Microchips</a></li>
+                  <li><a href="#">Adopciones</a></li>
+                  
+                </ul>
+              </div>
             </div>
-            <div>
-                <p>Nuestras redes</p>
+            <div class="col-md-3 col-sm-6">
+              <div class="footer-pad">
+                <h4>Contacto</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Atención Teléfonico: Numero</a></li>
+                  <li><a href="#">Atención Whatsapp: Numero</a></li>
+                  <li><a href="#">Lunes a Sábados de 9 a 21 hs, Domingos de 10 a 20 hs</a></li>
+                  
+                    <a href="#"></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section> -->
-    </footer>
+              <div class="col-md-3">
+                  <h4>Síguenos</h4>
+                  <ul class="social-network social-circle">
+                   <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                  </ul>				
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12 copy">
+                  <p class="text-center">&copy; Copyright 2023 - Animalandia. Todos los Derechos Reservados.</p>
+              </div>
+          </div>
+        </div>
+        </div>
+      </footer>
 </body>
 </html>
