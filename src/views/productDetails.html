@@ -4,53 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+ 
+    <link rel="stylesheet" href="/css/stylesFooter.css">
+    <link rel="stylesheet" href="/css/stylesHeader.css">
     <link rel="stylesheet" href="/css/stylesProductDetails.css">
 
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Detalles de Producto</title>
 
 </head>
+<header>
+   <!-- header -->
+   <div id="header">
+    <div class="logo">
+      <img src="/images/logo.png" >
+    </div>  
+    <nav>
+      <form class="search" action="search.css"> 
+        <input name="q" placeholder="Search..." type="search">
+      </form>
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Nosotros</a>
+          <ul class="mega-dropdown">
+            <li class="row">
+              <ul class="mega-col">
+                <li><a href="#">Sobre Animalandia</a></li>
+                <li><a href="#">Blog</a></li>
+                
+              </ul>
+            </li>
+          </ul>        
+        </li>
+        <li class="dropdown">
+          <a href="#">Login</a>
+            <ul>
+              <li><a href="#">Registrarse</a></li>
+              <li><a href="#">Iniciar Sesión</a></li>
+            </ul>        
+        </li>
+        <li>
+          <a href="">Tienda</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 <body>
-    <section class="tituloConImagenes">
-        <h2 class="fs14">COMIDA GATOS CASTRADOS - ROYAL CANIN</h2>
-        <div class="divDeImagenes">
-            <div class="imagenesVerticalesProducto">
-                <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="smallImages">
-                <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="smallImages">
-                <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="smallImages">
-            </div>
-            <div class="imagenPrincipalProducto">
-                <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados">
-            </div>
+<main>
+  <div class="title-images">
+    <div class="prod-title">
+      <p class="s-16 fw-600">COMIDA PARA GATOS CASTRADOS</p>
+    </div>
+    <div class="img-container">
+        <div class="small-images-col">
+          <div class="small-image">
+            <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+          </div>
+          <div class="small-image">
+            <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+          </div>
+          <div class="small-image">
+            <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+          </div>
         </div>
-    </section>
-    <section class="nombreYDescripcion">
-        <h4 class="fs13">Comida para Gatos Castrados</h4>
-        <h5 class="fs12">Lo que tenés que saber de este producto:</h5>
-            <ul class="fs11">
-                <li>Marca: Royal Canin.</li>
-                <li>Recomendado para gato adulto.</li>
-                <li>Sabor: Mix.</li>
-                <li>Peso: 7.5kg</li>
-                <li>Las imágenes son ilustrativas. El producto puede variar según el peso.</li>
+        <div class="selected-image">
+          <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+        </div>
+    </div>
+  </div>
+  <div class="name-description">
+    <div class="prod-name">
+      <p class="s-14">Comida para Gatos Castrados ROYAL CANIN</p>
+    </div>
+    <div class="prod-description">
+      <ul class="style-none">
+        <li>Marca: Royal Canin</li>
+        <li>Sabor: Mix.</li>
+        <li>Peso: 7.5kg</li>
+        <li>Las imágenes son ilustrativas. El producto puede variar según el peso.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-buttons">
+    <div class="price">
+      <div class="price-button">
+        <p>$20.000</p>
+      </div>
+    </div>
+    <div class="cant-add-cart">
+        <div class="cant-button">
+          <div class="add-button">+</div>
+          <div class="cant-text">CANTIDAD</div>
+          <div class="remove-button">-</div>
+        </div>
+        <div class="add-cart-button">
+          <button type="submit" class="s-14 button-carrito">AÑADIR AL CARRITO</button>
+        </div>
+    </div>
+  </div>
+</main>
+<footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <!--Column1-->
+          <div class="footer-pad">
+            <h4>Nosotros</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Sobre Animalandia</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Trabaja con Nosotros</a></li>
+              
             </ul>
-    </section>
-    <section class="cuadros">
-        <div class="cuadroPrecio">
-            <div class="divDelPrecio fs12">
-            <p>$</p>
-            <p>20.000</p>
-            </div>
+          </div>
         </div>
-        <div class="botonesOpciones">
-                <div class="botonCantidad fs12">
-                    <p class="m5 bgDarkGray bold h100 w100">+</p>
-                    <p class="m5">CANTIDAD</p>
-                    <p class="m5 bgDarkGray bold h100 w100">-</p>
-                </div>
-                <div class="botonAgregarCarrito fs12">
-                    <p>AGREGAR AL CARRITO</p>
-                </div>
+        <div class="col-md-3 col-sm-6">
+          <!--Column1-->
+          <div class="footer-pad">
+            <h4>Servicios</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Veterinaria</a></li>
+              <li><a href="#">Peluqueria</a></li>
+              <li><a href="#">Microchips</a></li>
+              <li><a href="#">Adopciones</a></li>
+              
+            </ul>
+          </div>
         </div>
-    </section>
+        <div class="col-md-3 col-sm-6">
+          <!--Column1-->
+          <div class="footer-pad">
+            <h4>Contacto</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Atención Teléfonico: Numero</a></li>
+              <li><a href="#">Atención Whatsapp: Numero</a></li>
+              <li><a href="#">Lunes a Sábados de 9 a 21 hs, Domingos de 10 a 20 hs</a></li>
+              
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <div class="col-md-3">
+              <h4>Síguenos</h4>
+              <ul class="social-network social-circle">
+               <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+              </ul>				
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 copy">
+              <p class="text-center">&copy; Copyright 2023 - Animalandia. Todos los Derechos Reservados.</p>
+          </div>
+      </div>
+  
+  
+    </div>
+    </div>
+</footer>
 </body>
 </html>
