@@ -4,10 +4,15 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "../public")))
 
-app.listen(process.env.PORT || 3001, () => {
+const PORT = 3001;
+app.listen(process.env.PORT || PORT, () => {
     console.log("Server en puerto 3001");
 });
+
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/home.html"));
 });
-;
+
+app.get("/carrito", (req,res)=>{
+    res.sendFile(path.join(__dirname, "views/productCart.html"))
+});
