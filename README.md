@@ -32,11 +32,12 @@ https://www.veterinariaalem.com/
 
 Estos sitios nos inspiran más por el lado de los productos que se ofrecen y al público al que apuntan para tener un mayor conocimiento en el área y poderle ofrecerle al cliente la mayor cantidad de productos que satisfagan sus necesidades.
 
-Enlace Trello: 
-
-https://trello.com/b/l38j5hab/grupo04
-
 https://meryj.mitiendanube.com/
 https://www.imanofficial.com/
 
 Por otro lado, y para cerrar con nuestros referentes, tenemos estos sitios web que nos inspiraron en cuanto al diseño y versatilidad que ofrecen, sentimos que queremos ofrecer algo parecido.
+
+
+Enlace Trello: 
+
+https://trello.com/b/l38j5hab/grupo04
