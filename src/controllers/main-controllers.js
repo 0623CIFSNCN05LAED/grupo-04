@@ -2,15 +2,15 @@ const path = require("path");
 
 module.exports={
     home : (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/home.html"));
+        res.render("home");
     },
     carrito : (req,res)=>{
-        res.sendFile(path.join(__dirname, "../views/productCart.html"))
+        res.render("productCart")
     },
     detallesDeProducto : (req,res)=>{
-        res.sendFile(path.join(__dirname, "../views/productDetails.html"))
+        res.render("productDetails")
     },
     login : (req,res)=>{
-        res.sendFile(path.join(__dirname, "../views/login.html"))
+        res.render("login")
     }
 }
