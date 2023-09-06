@@ -36,3 +36,8 @@ https://meryj.mitiendanube.com/
 https://www.imanofficial.com/
 
 Por otro lado, y para cerrar con nuestros referentes, tenemos estos sitios web que nos inspiraron en cuanto al diseño y versatilidad que ofrecen, sentimos que queremos ofrecer algo parecido.
+
+
+Enlace Trello: 
+
+https://trello.com/b/l38j5hab/grupo04
