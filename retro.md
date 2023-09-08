@@ -36,3 +36,22 @@ Cosas para empezar a hacer:
 
 Cosas para dejar de hacer:
     -Aplazar el proyecto a último momento (Dejarse estar termina perjudicando a todo el grupo)
+
+SPRINT 3
+
+Cosas a mantener:
+    - Reuniones semanales que nos permiten mejorar la comunicación y no atrasarnos con las entregas
+
+Cosas a mejorar:
+    - Comunicación (siempre podemos mejorar la comunicación a pesar de que en este sprint la misma mejoró notablemente)
+    - Distribución del tiempo
+
+Cosas a tener en cuenta:
+    - Diferencia de horarios (seguimos teniendo en cuenta esto desde el sprint 1)
+
+Cosas para empezar a hacer:
+    - Reuniones que sirvan para fijar objetivos al comienzo de un sprint (si bien ahora estamos teniendo más reuniones, encontramos un error a al hora de comenzar los sprints que es que no fijamos objetivos en común, simplemente nos dividimos las tareas)
+
+Cosas para dejar de hacer:
+    - En este sprint trabajamos bien y no tenemos cosas para dejar de hacer
+
