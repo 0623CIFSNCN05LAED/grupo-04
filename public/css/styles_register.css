@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.align-center {
+    align-self: center;
+}
+.jcl {
+    justify-content: left;
+    padding-left: 20px;
+   
+}
+.f-ss {
+    font-family: sans-serif;
+}
+.f-arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-400 {
+    font-weight:400;
+}
+.p-1 {
+    padding: 10px;
+}
+.flex {
+    display: flex;
+}
+.flex-dir-col {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+    align-items: center;
+}
+.my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.mg-x-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.w-100 {
+    width: 100%;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.bgc-grey {
+    background-color: #ebebeb;
+}
+.bgc-darkgrey {
+    background-color: grey;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.fs-14 {
+    font-size: 14px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.mr-1 {
+    margin-right: 10px;
+
+}
+.ml-1 {
+    margin-left: 10px;
+}
+.border-radius {
+    border-radius: 20px;
+}
+.w-50 {
+    width: 50%;
+}
+.w-80 {
+    width: 80%;
+}
+.h-a {
+    height: auto;
+}

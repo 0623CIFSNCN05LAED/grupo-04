@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" > -->
+
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <title>Carrito de compras</title>
+    <%-include("partials/head") %> 
+</head>
+
+<body>
+    
+        <%-include("partials/header") %> 
+        <!-- <header>
+        <div id="header">
+            <div class="logo">
+            <img src="/images/logo.png" >
+            </div>  
+            <nav>
+                <form class="search" action="search.css"> 
+                    <input name="q" placeholder="Search..." type="search">
+                </form>
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Nosotros</a>
+                    <ul class="mega-dropdown">
+                        <li class="row">
+                            <ul class="mega-col">
+                                <li><a href="#">Sobre Animalandia</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>        
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Login</a>
+                        <ul>
+                            <li><a href="#">Registrarse</a></li>
+                            <li><a href="#">Iniciar Sesión</a></li>
+                        </ul>        
+                    </li>
+                        <li>
+                            <a href="">Tienda</a>
+                        </li>
+                </ul>
+            </nav>
+        </div-->
+    
+    <main class="bg-color-main">
+        <section>
+            <fieldset class="flex border-field-carrito">
+                <div>
+                    <h1 class="center w-90">CARRITO DE COMPRAS</h1>
+                </div>
+                <button class="button-home"><i class="fa-solid fa-xmark align-center"><a href="/"></a></i></button>
+            </fieldset>
+            <fieldset class="flex-product border-field">
+                <div class="flex">
+                    <img src="../images/descarga.jpg" alt="producto" class="img img-gen">
+                    <div >
+                        <img src="../images/descarga.jpg" alt="prod1" class="border row-azu img-gen img-prod">
+                        <img src="../images/descarga.jpg" alt="prod2" class="border row-azu img-gen img-prod">
+                        <img src="../images/descarga.jpg" alt="prod3" class="border row-azu img-gen img-prod">
+                    </div>
+                    
+                </div>
+                <div>
+                    <h2>Nombre del producto</h2> 
+                    <h5 class="t-5">Descripción del producto</h5>
+                    <input type="number" name="cantidad" min="1" class="form-cantidad">     
+                </div>
+                <i class="fa-solid fa-trash trash"></i>         
+            </fieldset>
+            <fieldset class="border-field-entrega">
+                <h3>ENTREGA DEL PEDIDO</h3>
+            </fieldset>
+            <fieldset class="border-field">                
+                <div class="minus">
+                    <h3 class="m-envio">MEDIOS DE ENVÍO  <button class="button-home">v</button></h3>
+                    <div class="hide-minus">
+                        <div class="flex">
+                            <input type="text" name="postal" placeholder="Indique su código postal" class="flex form-postal"><button class="flex form-calculo">CALCULAR</button>
+                        </div>
+                        <h5 class="t-4"><a href="https://www.correoargentino.com.ar/formularios/cpa">NO SÉ MI CODIGO POSTAL</a></h5>
+                    </div>
+                </div>      
+            </fieldset>
+            <fieldset class="border-field">
+                <div class="plus">
+                    <h3 class="m-envio">NUESTRO LOCAL  <button class="button-home">v</button></h3>
+                    <div class="hide-plus">
+                        <p><input type="checkbox" name="retiro" class="local"> Retiro en el local</p>
+                    </div>                     
+                </div>                              
+            </fieldset>
+            <fieldset class="border-field-pago">
+                <div class="flex-product-pago">
+                    <h3 class="w-80">Total a pagar</h3> 
+                    <i class="fa-solid fa-dollar-sign"></i> 
+                </div>
+                <div class="b-space">
+                    <button class="">INICIAR COMPRA</button>
+                </div>                  
+            </fieldset>
+        </section>
+    </main>
+    <!-- footer -->
+    <%-include("partials/footer") %>  
+    <!-- <footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <!Column1-->
+          <!-- <div class="footer-pad">
+            <h4>Nosotros</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Sobre Animalandia</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Trabaja con Nosotros</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <!-Column1-->
+          <!-- <div class="footer-pad">
+            <h4>Servicios</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Veterinaria</a></li>
+              <li><a href="#">Peluqueria</a></li>
+              <li><a href="#">Microchips</a></li>
+              <li><a href="#">Adopciones</a></li>
+              
+            </ul>
+          </div>
+        </div> -->
+        <!-- <div class="col-md-3 col-sm-6">
+          <!-Column1-->
+          <!-- <div class="footer-pad">
+            <h4>Contacto</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Atención Teléfonico: Numero</a></li>
+              <li><a href="#">Atención Whatsapp: Numero</a></li>
+              <li><a href="#">Lunes a Sábados de 9 a 21 hs, Domingos de 10 a 20 hs</a></li>
+              
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <div class="col-md-3">
+              <h4>Síguenos</h4>
+              <ul class="social-network social-circle">
+               <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+              </ul>				
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12 copy">
+              <p class="text-center">&copy; Copyright 2023 - Animalandia. Todos los Derechos Reservados.</p>
+          </div>
+      </div>
+   
+  
+    </div>
+    </div>
+  </footer> -->
+</body>
+</html>
