@@ -16,23 +16,23 @@ app.use(express.static(path.join(__dirname, "../public")))
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./views/home.html"));
+    res.sendFile(path.join(__dirname, "./views/home.ejs"));
 });
 
 app.get("/login", (req,res)=>{
-    res.sendFile(path.join(__dirname, "views/login.html"))
+    res.sendFile(path.join(__dirname, "views/login.ejs"))
 })
 
 app.get("/productos", (req,res)=>{
-    res.sendFile(path.join(__dirname, "views/productos.html"))
+    res.sendFile(path.join(__dirname, "views/productos.ejs"))
 })
 
 app.get("/carrito", (req,res)=>{
-    res.sendFile(path.join(__dirname, "views/productCart.html"))
+    res.sendFile(path.join(__dirname, "views/productCart.ejs"))
 })
 
 app.get("/detalles-de-producto", (req,res)=>{
-    res.sendFile(path.join(__dirname, "views/productDetails.html"))
+    res.sendFile(path.join(__dirname, "views/productDetails.ejs"))
 })
 
 app.use(mainRouter)
