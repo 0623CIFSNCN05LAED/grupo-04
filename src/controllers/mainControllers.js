@@ -1,6 +1,6 @@
 const path = require("path");
 
-module.exports = {
+const controller = {
   home: (req, res) => {
     res.render("home");
   },
@@ -17,3 +17,5 @@ module.exports = {
     res.render("register");
   },
 };
+
+module.exports = controller

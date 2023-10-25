@@ -1,38 +1,16 @@
 const express = require("express");
 const path = require("path")
 const app = express();
-const mainRouter = require("./routes/main-routes")
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
+app.use(express.static(path.join(__dirname, "../public")))
+
+const mainRouter = require("./routes/main")
+app.use("/", mainRouter)
 
 const PORT = 3002;
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server en puerto ${PORT}`);
 });
-
-app.set("view engine", "ejs");
-app.set("views", "./src/views");
-
-
-app.use(express.static(path.join(__dirname, "../public")))
-
-
-app.get("/", (req, res) => {
-    res.render(path.join(__dirname, "./views/home.ejs"));
-});
-
-app.get("/login", (req,res)=>{
-    res.render(path.join(__dirname, "views/login.ejs"))
-})
-
-app.get("/productos", (req,res)=>{
-    res.render(path.join(__dirname, "views/productos.ejs"))
-})
-
-app.get("/carrito", (req,res)=>{
-    res.render(path.join(__dirname, "views/productCart.ejs"))
-})
-
-app.get("/detalles-de-producto", (req,res)=>{
-    res.render(path.join(__dirname, "views/productDetails.ejs"))
-})
-
-app.use(mainRouter)
