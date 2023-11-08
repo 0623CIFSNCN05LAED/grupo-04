@@ -1,11 +1,11 @@
 [{"id":1,
-"name":"Alimento Excellent Skin Care",
-"taste":"cordero",
+"name":"marca: Alimento Excellent Skin Care",
+"taste":" sabor cordero",
 "weight":"15kg",
 "category":"comida para perro",
 "image":"alimento1.png",
 "description":"Purina Excellent Adulto Skin Care con cordero es un alimento balanceado completo para perros adultos de todos los tamaños con piel sensible.Su fórmula se basa en el exclusivo sistema smart nutrition (creado por Purina), el cual mediante una nutrición balanceada aporta múltiples beneficios provenientes de sus componentes de alta calidad, manteniendo a tu perro con un excelente estado de salud.Este alimento está compuesto con un 24% de proteína y un 11% de grasa",
-"age":"Adulto",
+"age":" edad: Adulto",
 "price":24950.00
 }
 ,

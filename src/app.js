@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, "../public")))
 const mainRouter = require("./routes/main")
 app.use("/", mainRouter)
 
+
 const PORT = 3002;
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server en puerto ${PORT}`);

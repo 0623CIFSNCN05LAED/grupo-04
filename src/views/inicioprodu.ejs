@@ -71,6 +71,14 @@
           <strong>Basado en tu última visita</strong>
         </p>
 
+      
+
+        <% inicioprodu.forAll(productos => { %>
+          <%- include("partials/productos", {productos}) %>
+          <% }) %>
+
+
+        <!-- 
     <div class="sub-main">
         <img class=productos src="/images/alimento1.png" alt="Excellent">
         <div class="sub-main-descripcion">
@@ -139,7 +147,7 @@
         <p class="precios">$1890.00<i class="descuentos">10% off</i></p>
         <p class="descripciones"><strong>Lata Wild</strong></p>
         </div>
-    </div> 
+    </div>  -->
     </main>
 
 

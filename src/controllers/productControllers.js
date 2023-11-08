@@ -8,6 +8,7 @@ const controller = {
     },
     // Creacion de producto
     create: (req, res) => {
+
         res.render("productos")
     },
     // Creacion - Almacenamiento de datos
