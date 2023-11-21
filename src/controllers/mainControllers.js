@@ -9,8 +9,8 @@ const controller = {
     res.render("productCart");
   },
   detallesDeProducto: (req, res) => {
-    res.render("productDetails");
-  },
+  res.render("productDetails");
+ },
   login: (req, res) => {
     res.render("login");
   },

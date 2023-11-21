@@ -1,0 +1,31 @@
+
+<div class="sub-main">
+    <img class=productos src="/images/alimento2.png" alt="Pouch">
+    <div class="sub-main-descripcion">
+    <p class="fas fa-truck"></p>
+    <p class="precios">$850.00<i class="descuentos">10% off</i></p>
+    <p class="descripciones"><strong>Pouch Homemade Delights River Gato</strong></p>
+    </div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+    <section class="product-box">
+        <a href="/product/<%= product.id %>">
+            <figure class="product-box_image">
+                <img src="/public/images/<%= product.image%>" alt="imagen de producto <%= product.name %>">
+            </figure>
+            <article class="product-box_data">
+                <h2><%= product.name</h2>
+                <p><%= product.price %></p>
+                <!-- <i class="fas fa-truck"></i> -->
+            </article>
+        </a>
+        <p><%= product.weight %</p>
+        <p><%= product.taste %</p>
+        <p><%= product.category %</p>
+        <p><%= product.description %</p>
+        <p><%= product.age %</p>
+
+    </section>
+</div>
+
