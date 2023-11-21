@@ -63,48 +63,60 @@
 </header> -->
 
 
-      <form method="post" class="form-products">
+      <form action="/productos/<%= product.id %>?_method=put" method="post" class="form-products">
 
         <!-- Nombre del producto -->
-        <div class="ndp">
-            <label for="nombre">Nombre del Producto:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
+        <div class="name of product">
+          <label for="name">Nombre del Producto:</label>
+          <input type="text" id="name" name="name" required value="<%= product.name %>"></input>
+      </div>
 
-        <!-- Descripción -->
-        <div class="dsc">
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-        </div>
+      <!-- Sabor -->
+      <div class="taste of product">
+        <label for="taste">Sabor:</label>
+        <input type="text" id="taste" name="taste" required value="<%= product.taste %>"></input>
+      </div>
 
-        <!-- Imagen -->
-        <div class="img">
-            <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/*" required>
-        </div>
+      <!-- Peso -->
+      <div class="weigth">
+          <label for="weight">Peso:</label>
+          <input type="text" id="weight" name="weight" value="<%= product.weight %>"> </input>
+      </div>
 
-        <!-- Categoría -->
-        <div class="cty"
-            <label for="categoria">Categoría:</label>
-            <input type="text" id="categoria" name="categoria" required>
-        </div>
+      <!-- Categoría -->
+      <div class="category">
+          <label for="category">Categoría:</label>
+          <input type="text" id="category" name="category" required value="<%= product.category %>"> </input>
+      </div>
 
-        <!-- Colores -->
-        <div class="clr">
-            <label for="colores">Colores (separados por comas):</label>
-            <input type="text" id="colores" name="colores">
-        </div>
+      <!-- Imagen -->
+      <div class="image">
+          <label for="image">Imagen:</label>
+          <input type="file" id="image" name="image" required value="<%= product.image %>"> </input>
+      </div>
 
-        <!-- Precio -->
-        <div class="pic">
-            <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" step="0.01" required>
-        </div>
+      <!-- Descripción -->
+      <div class="description">
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" rows="4" required value="<%= product.description %>"></textarea>
+      </div>
 
-        <!-- Botón de envío -->
-        <div class="gp">
-            <input type="submit" value="Guardar Producto">
-        </div>
+      <!-- Edad -->
+      <div class="age">
+        <label for="age">Destinado para (Adulto, Gatito, etc):</label>
+        <input type="text" id="age" name="age" required value="<%= product.age %>"></input>
+      </div>
+
+      <!-- Precio -->
+      <div class="price">
+          <label for="price">Precio:</label>
+          <input type="number" id="price" name="price" step="0.01" accept="image/*" required value="<%= product.price %>"></input>
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="save">
+          <button type="submit">Guardar Producto</button> 
+      </div>
 
 
 

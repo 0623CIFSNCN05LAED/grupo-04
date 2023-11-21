@@ -14,7 +14,7 @@
     < carrusel -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
      --> 
-     <%-include("partials/head") %>     
+     <%-include("partials/head", {title: "Productos"}) %>     
 
     </head>
     <body>
@@ -71,6 +71,11 @@
           <strong>Basado en tu última visita</strong>
         </p>
 
+        <% products.forEach(product => { %>
+        <%- include("partials/producto", {product}) %>
+        <% }) %>
+
+        <!-- 
     <div class="sub-main">
         <img class=productos src="/images/alimento1.png" alt="Excellent">
         <div class="sub-main-descripcion">
@@ -139,7 +144,7 @@
         <p class="precios">$1890.00<i class="descuentos">10% off</i></p>
         <p class="descripciones"><strong>Lata Wild</strong></p>
         </div>
-    </div> 
+    </div>  -->
     </main>
 
 

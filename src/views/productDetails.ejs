@@ -4,8 +4,8 @@
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
      <link rel="stylesheet" href="/css/stylesFooter.css">
-    <link rel="stylesheet" href="/css/stylesHeader.css">
-    <link rel="stylesheet" href="/css/stylesProductDetails.css">
+    <!-- <link rel="stylesheet" href="/css/stylesHeader.css"> -->
+    <!-- <link rel="stylesheet" href="/css/stylesProductDetails.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,35 +60,43 @@
 
 <main>
   <div class="title-images">
+  
     <div class="prod-title">
-      <p class="s-16 fw-600">COMIDA PARA GATOS CASTRADOS</p>
+      <p class="s-16 fw-600"> <%- product.name %></p>
     </div>
     <div class="img-container">
         <div class="small-images-col">
           <div class="small-image">
-            <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+            <!-- <img src=" <%= product.images %>" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
           <div class="small-image">
-            <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+
+            <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
           <div class="small-image">
-            <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+
+            <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
         </div>
         <div class="selected-image">
-          <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain">
+          <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+
+          <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
         </div>
     </div>
   </div>
   <div class="name-description">
     <div class="prod-name">
-      <p class="s-14">Comida para Gatos Castrados ROYAL CANIN</p>
+      <p class="s-14"> <%-product.description %> </p>
     </div>
     <div class="prod-description">
       <ul class="style-none">
-        <li>Marca: Royal Canin</li>
-        <li>Sabor: Mix.</li>
-        <li>Peso: 7.5kg</li>
+        <li><%- product.name %></li>
+        <li><%- product.taste %></li>
+        <li><%- product.weight %></li>
         <li>Las imágenes son ilustrativas. El producto puede variar según el peso.</li>
       </ul>
     </div>
@@ -96,7 +104,7 @@
   <div class="main-buttons">
     <div class="price">
       <div class="price-button">
-        <p>$20.000</p>
+        <p><%= product.price %></p>
       </div>
     </div>
     <div class="cant-add-cart">
@@ -105,6 +113,7 @@
           <div class="cant-text">CANTIDAD</div>
           <div class="remove-button">-</div>
         </div>
+       
         <div class="add-cart-button">
           <button type="submit" class="s-14 button-carrito">AÑADIR AL CARRITO</button>
         </div>

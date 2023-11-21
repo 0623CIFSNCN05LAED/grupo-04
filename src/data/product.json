@@ -1,93 +1,101 @@
-[{"id":1,
-"name":"Alimento Excellent Skin Care",
-"taste":"cordero",
-"weight":"15kg",
-"category":"comida para perro",
-"image":"alimento1.png",
-"description":"Purina Excellent Adulto Skin Care con cordero es un alimento balanceado completo para perros adultos de todos los tamaños con piel sensible.Su fórmula se basa en el exclusivo sistema smart nutrition (creado por Purina), el cual mediante una nutrición balanceada aporta múltiples beneficios provenientes de sus componentes de alta calidad, manteniendo a tu perro con un excelente estado de salud.Este alimento está compuesto con un 24% de proteína y un 11% de grasa",
-"age":"Adulto",
-"price":24950.00
-}
-,
-{"id":2,
-"name":"Pouch Homemade Delights River Gato",
-"taste":"salmon",
-"weight":"100 Gr",
-"category":"Alimento para gatos",
-"image":"alimento2.png",
-"description":"El Pouch Homemade Delights River Salmon Gato Adulto es un alimento húmedo balanceado desarrollado a partir de una fórmula equilibrada de macronutrientes, micronutrientes, vitaminas y minerales de alta calidad que satisfacen las necesidades nutricionales de los gatos adultos mayores de 12 meses de edad.Su principal ingrediente es el salmón del sur criado de manera sostenible, asegurando vitaminas, minerales y nutrientes para proporcionar la nutrición que tu gato necesita para una vida larga y saludable.",
-"age":"Adulto",
-"price":850.00
-},
-
-{"id":3,
-"name":"Alimento Pro Plan",
-"taste":"pollo y arroz",
-"weight":"3kg",
-"category":"Alimento para gatos",
-"image":"alimento3.png",
-"description":"Alimento completo y balanceado para gatos adultos de todas las razas. Es una tecnología exclusiva, con una combinación de prebióticos y antioxidantes naturales, que ayudan a optimizar la digestión y a mantener fuertes las defensas naturales de tu gato, protegiendo su sistema inmunológico contra las amenazas externas.Beneficios: Con antioxidantes naturales que ayudan en el sistema de protección de los gatos,Tecnología TARTAR CONTROL que ayuda a reducir el sarro dental en un 41% con respecto a fórmula PRO PLAN® Adult Cat sin pirofosfato tetrasódico, promoviendo dientes saludables y más fuertes,Tecnología Optiprebio, incluye prebióticos naturales, que estabilizan la flora intestinal ayudando a optimizar la digestión y la absorción de nutrientes clave para una mejor salud digestiva, La inclusión de minerales quelados ayuda a asegurar una óptima absorción y disponibilidad de micro-minerales clave para la salud,Con antioxidantes naturales que ayudan en el sistema de protección de los gatos.",
-"age":"Adulto",
-"price":15090.00
-},
-
-
-{"id":4,
-"name":"Alimento Eukanuba",
-"taste":"pollo",
-"weight":"15kg",
-"category":"Alimento para perro",
-"image":"alimento4.png",
-"description":"El Alimento Eukanuba Adulto Medium Breed es un alimento balanceado completo para perros adultos mayores a 12 meses de edad y de razas medianas como Bulldog Francés, Beagle, Bretón, Cocker, Boxer, Schnauzer Standard y otras razas o perros mestizos que pesan entre 10 y 25 kg. Las fórmulas para adulto de EUKANUBA aseguran un nivel de glucosa en sangre adecuado y sostenido en el tiempo, y una digestión más prolongada gracias al balance especial entre diferentes tipos de granos.",
-"age":"Adulto",
-"price":26390.00
-},
-
-
-{"id":5,
-"name":"Alimento Excellent para Gato",
-"taste":"pollo y arroz",
-"weight":"3kg",
-"category":"Alimento para gatos",
-"image":"alimento5.png",
-"description":"Excellent Gato Adulto Pollo Y Arroz es un alimento Premium para gatos adultos mayores de un año. Este alimento tiene ingredientes de alta calidad que permiten mantener un pH adecuado en la orina que contribuye a impedir la formación de cálculos y cristales. Tiene una relación adecuada de proteínas y calorías, disminuyendo la masa corporal grasa, evitando los efectos del sobrepeso.",
-"age":"adulto, senior",
-"price":10150.00
-},
-
-
-{"id":6,
-"name":"Pack x 6u Lata Homemade Delights Country Turkey Gato",
-"taste":"sardina",
-"weight":"340Gr",
-"category":"Alimento para gatos",
-"image":"alimento6.png",
-"description":"La Lata Homemade Delights Country Turkey Gato Adulto es un alimento balanceado  desarrollado a partir de una fórmula equilibrada de macronutrientes, micronutrientes, vitaminas y minerales de alta calidad, que cubre los requerimientos alimenticios de tu gato adulto desde los 12 meses de edad. Su principal ingrediente es pavo de campo alimentado de manera natural, asegurando proteínas de alta calidad que promueven una vida larga y saludable para tu gato.",
-"age":"Adulto",
-"price":11340.00
-},
-
-
-{"id":7,
-"name":"Alimento Pro Plan Puppy Complete Bonus Bag",
-"taste":"pollo",
-"weight":"15+3Kg",
-"category":"Alimento para perro",
-"image":"alimento7.png",
-"description":"Purina Pro Plan elimina la “brecha inmunológica” y provee nutrición completa que ayuda a los cachorros a crecer fuertes y sanos. A su vez, también ayuda a otras cosas claves en el cuidado de la mascota, tales como reforzar el sistema inmune, fortalecer la microflora intestinal y reforzar la barrera cutánea.Formulado con carne fresca de pollo como ingrediente principal, además de vitaminas y minerales esenciales, PRO PLAN® Puppy Razas Medianas ofrece una óptima nutrición para cachorros en crecimiento.",
-"age":"cachorro",
-"price":38050.00
-},
-
-
-{"id":8,
-"name":"Lata Wild",
-"taste":"cordero y pavo",
-"weight":"340Gr",
-"category":"Alimento para perro",
-"image":"alimento8.png",
-"description":"El Alimento Húmedo Wild Cordero Y Pavo es una opción de alta calidad que busca proporcionar el retorno al origen instintivo de la alimentación canina. Este alimento se destaca por su selección de carnes frescas como alternativa a la carne vacuna, brindando a tu perro una experiencia de sabor real, natural y proporcionándole los aminoácidos esenciales y no esenciales necesarios para su bienestar y funciones fisiológicas.",
-"age":"Cachorro, Adulto, Adulto Senior",
-"price":1890.00
-}
+[
+  {
+    "id": 1,
+    "name": "Alimento Excellent Skin Care",
+    "taste": "cordero",
+    "weight": "15kg",
+    "category": "comida para perro",
+    "image": "alimento1.png",
+    "description": "Purina Excellent Adulto Skin Care con cordero es un alimento balanceado completo para perros adultos de todos los tamaños con piel sensible.Su fórmula se basa en el exclusivo sistema smart nutrition (creado por Purina), el cual mediante una nutrición balanceada aporta múltiples beneficios provenientes de sus componentes de alta calidad, manteniendo a tu perro con un excelente estado de salud.Este alimento está compuesto con un 24% de proteína y un 11% de grasa",
+    "age": "Adulto",
+    "price": 24950
+  },
+  {
+    "id": 2,
+    "name": "Pouch Homemade Delights River Gato",
+    "taste": "salmon",
+    "weight": "100 Gr",
+    "category": "Alimento para gatos",
+    "image": "alimento2.png",
+    "description": "El Pouch Homemade Delights River Salmon Gato Adulto es un alimento húmedo balanceado desarrollado a partir de una fórmula equilibrada de macronutrientes, micronutrientes, vitaminas y minerales de alta calidad que satisfacen las necesidades nutricionales de los gatos adultos mayores de 12 meses de edad.Su principal ingrediente es el salmón del sur criado de manera sostenible, asegurando vitaminas, minerales y nutrientes para proporcionar la nutrición que tu gato necesita para una vida larga y saludable.",
+    "age": "Adulto",
+    "price": 850
+  },
+  {
+    "id": 3,
+    "name": "Alimento Pro Plan",
+    "taste": "pollo y arroz",
+    "weight": "3kg",
+    "category": "Alimento para gatos",
+    "image": "alimento3.png",
+    "description": "Alimento completo y balanceado para gatos adultos de todas las razas. Es una tecnología exclusiva, con una combinación de prebióticos y antioxidantes naturales, que ayudan a optimizar la digestión y a mantener fuertes las defensas naturales de tu gato, protegiendo su sistema inmunológico contra las amenazas externas.Beneficios: Con antioxidantes naturales que ayudan en el sistema de protección de los gatos,Tecnología TARTAR CONTROL que ayuda a reducir el sarro dental en un 41% con respecto a fórmula PRO PLAN® Adult Cat sin pirofosfato tetrasódico, promoviendo dientes saludables y más fuertes,Tecnología Optiprebio, incluye prebióticos naturales, que estabilizan la flora intestinal ayudando a optimizar la digestión y la absorción de nutrientes clave para una mejor salud digestiva, La inclusión de minerales quelados ayuda a asegurar una óptima absorción y disponibilidad de micro-minerales clave para la salud,Con antioxidantes naturales que ayudan en el sistema de protección de los gatos.",
+    "age": "Adulto",
+    "price": 15090
+  },
+  {
+    "id": 4,
+    "name": "Alimento Eukanuba",
+    "taste": "pollo",
+    "weight": "15kg",
+    "category": "Alimento para perro",
+    "image": "alimento4.png",
+    "description": "El Alimento Eukanuba Adulto Medium Breed es un alimento balanceado completo para perros adultos mayores a 12 meses de edad y de razas medianas como Bulldog Francés, Beagle, Bretón, Cocker, Boxer, Schnauzer Standard y otras razas o perros mestizos que pesan entre 10 y 25 kg. Las fórmulas para adulto de EUKANUBA aseguran un nivel de glucosa en sangre adecuado y sostenido en el tiempo, y una digestión más prolongada gracias al balance especial entre diferentes tipos de granos.",
+    "age": "Adulto",
+    "price": 26390
+  },
+  {
+    "id": 5,
+    "name": "Alimento Excellent para Gato",
+    "taste": "Atún",
+    "weight": "3kg",
+    "category": "Alimento para gatos",
+    "image": "alimento5.png",
+    "description": "Muy rico",
+    "age": "adulto, senior",
+    "price": "10150"
+  },
+  {
+    "id": 6,
+    "name": "Pack x 6u Lata Homemade Delights Country Turkey Gato",
+    "taste": "sardina",
+    "weight": "340Gr",
+    "category": "Alimento para gatos",
+    "image": "alimento6.png",
+    "description": "La Lata Homemade Delights Country Turkey Gato Adulto es un alimento balanceado  desarrollado a partir de una fórmula equilibrada de macronutrientes, micronutrientes, vitaminas y minerales de alta calidad, que cubre los requerimientos alimenticios de tu gato adulto desde los 12 meses de edad. Su principal ingrediente es pavo de campo alimentado de manera natural, asegurando proteínas de alta calidad que promueven una vida larga y saludable para tu gato.",
+    "age": "Adulto",
+    "price": 11340
+  },
+  {
+    "id": 7,
+    "name": "Alimento Pro Plan Puppy Complete Bonus Bag",
+    "taste": "pollo",
+    "weight": "15+3Kg",
+    "category": "Alimento para perro",
+    "image": "alimento7.png",
+    "description": "Purina Pro Plan elimina la “brecha inmunológica” y provee nutrición completa que ayuda a los cachorros a crecer fuertes y sanos. A su vez, también ayuda a otras cosas claves en el cuidado de la mascota, tales como reforzar el sistema inmune, fortalecer la microflora intestinal y reforzar la barrera cutánea.Formulado con carne fresca de pollo como ingrediente principal, además de vitaminas y minerales esenciales, PRO PLAN® Puppy Razas Medianas ofrece una óptima nutrición para cachorros en crecimiento.",
+    "age": "cachorro",
+    "price": 38050
+  },
+  {
+    "id": 8,
+    "name": "Lata Wild",
+    "taste": "cordero y pavo",
+    "weight": "340Gr",
+    "category": "Alimento para perro",
+    "image": "alimento8.png",
+    "description": "El Alimento Húmedo Wild Cordero Y Pavo es una opción de alta calidad que busca proporcionar el retorno al origen instintivo de la alimentación canina. Este alimento se destaca por su selección de carnes frescas como alternativa a la carne vacuna, brindando a tu perro una experiencia de sabor real, natural y proporcionándole los aminoácidos esenciales y no esenciales necesarios para su bienestar y funciones fisiológicas.",
+    "age": "Cachorro, Adulto, Adulto Senior",
+    "price": 1890
+  },
+  {
+    "id": "e0fa740a-a4ac-42ed-accd-9c08b23d2175",
+    "name": "Comida Royal Canin",
+    "taste": "Pescado",
+    "weight": "3kg",
+    "category": "Gatos adultos",
+    "image": "1700527045309_img_.jpg",
+    "description": "Comida para gatos castrados",
+    "age": "Adulto",
+    "price": 5860
+  }
 ]
