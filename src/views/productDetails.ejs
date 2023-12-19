@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-     <link rel="stylesheet" href="/css/stylesFooter.css">
-    <!-- <link rel="stylesheet" href="/css/stylesHeader.css"> -->
-    <!-- <link rel="stylesheet" href="/css/stylesProductDetails.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+     <title>Animalandia</title> 
+     <link rel="stylesheet" href="/css/styleproducto.css">
+    <!-- <! footer --> 
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    -->
+     <%-include("partials/head") %>     
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
-
-    <title>Detalles de Producto</title>
-    <%-include("partials/head") %> 
 </head>
 <body>
 <!-- <header> -->
@@ -24,9 +25,7 @@
       <img src="/images/logo.png" >
     </div>  
     <nav>
-      <form class="search" action="search.css"> 
-        <input name="q" placeholder="Search..." type="search">
-      </form>
+      
       <ul>
         <li>
           <a href="">Home</a>
@@ -59,44 +58,42 @@
 </header> -->
 
 <main>
-  <div class="title-images">
+  <%- include("partials/producto", {product}) %>
+  <!-- <div class="title-images">
   
     <div class="prod-title">
-      <p class="s-16 fw-600"> <%- product.name %></p>
+      <p class="s-16 fw-600"> <%= product.name %></p>
     </div>
     <div class="img-container">
         <div class="small-images-col">
           <div class="small-image">
-            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
-            <!-- <img src=" <%= product.images %>" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
+            <img src= "img/productos/<%-product.image%> " alt="product image" class="product-detail-img" />
+            img/productos/<%-product.image%>
           </div>
           <div class="small-image">
-            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+            <img src= "img/productos/<%-product.image%> " alt="product image" class="product-detail-img" />
 
-            <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
           <div class="small-image">
-            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+            <img src= "img/productos/<%-product.image%> " alt="product image" class="product-detail-img" />
 
-            <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
         </div>
         <div class="selected-image">
-          <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+          <img src= "img/productos/<%-product.image%> " alt="product image" class="product-detail-img" />
 
-          <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
         </div>
     </div>
   </div>
   <div class="name-description">
     <div class="prod-name">
-      <p class="s-14"> <%-product.description %> </p>
+      <p class="s-14"> <%=product.description %> </p>
     </div>
     <div class="prod-description">
       <ul class="style-none">
-        <li><%- product.name %></li>
-        <li><%- product.taste %></li>
-        <li><%- product.weight %></li>
+        <li><%= product.name %></li>
+        <li><%= product.taste %></li>
+        <li><%= product.weight %></li>
         <li>Las imágenes son ilustrativas. El producto puede variar según el peso.</li>
       </ul>
     </div>
@@ -118,7 +115,7 @@
           <button type="submit" class="s-14 button-carrito">AÑADIR AL CARRITO</button>
         </div>
     </div>
-  </div>
+  </div> -->
 </main>
 <%-include("partials/footer") %> 
 <!-- <footer class="mainfooter" role="contentinfo">
