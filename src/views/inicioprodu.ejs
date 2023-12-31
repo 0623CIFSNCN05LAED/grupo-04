@@ -23,18 +23,14 @@
       <%-include("partials/header") %>  
    
 
-    <main>
+    <main class="wrapper" role="main">
     <div class="contenedor-main">
         <p class="titulares">
           <strong><h1>Productos</h1></strong>
         </p>
-
-
-
-             <main class="wrapper" role="main">
-              <% products.forEach(product => { %>
-                <%- include("partials/producto", {product}) %>
-             <% }) %>
+        <% product.forEach(product => { %>
+          <%- include("partials/producto", {product}) %>
+        <% }) %>
 
 </main>
 

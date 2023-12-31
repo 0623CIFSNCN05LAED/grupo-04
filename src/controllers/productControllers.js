@@ -3,12 +3,12 @@ const productServices = require("../services/productServices");
 const controller = {
     // Todos los productos
     all: (req, res) => {
-        const products = productServices.getAll();
-        res.render("inicioprodu", {products});
+        productServices.getAll().then((product)=>{
+            res.render("inicioprodu", {product});
+        })
     },
     // Creación de producto
     create: (req, res) => {
-
         res.render("productos")
     },
     // Creación - Almacenamiento de datos
@@ -24,36 +24,46 @@ const controller = {
             age: req.body.age,
             price: Number(req.body.price),
           };
-        productServices.createProduct(product);
-        res.redirect("/productos")
+        productServices.createProduct(product).then(()=>{
+            res.redirect("/productos")
+        });
     },
     // Detalle de un producto particular
     product: (req, res) => {
-        const id = req.params.id;
-        const product = productServices.getProduct(id);
-        res.render("productDetails", {product})
+        const id= req.params.id
+        productServices.getProduct(id).then((product)=>{
+            res.render("productDetails", {product})
+        })
     },
     // Capto el producto a editar
     edit: (req, res) => {
-        const id = req.params.id;
-        const product = productServices.getProduct(id);
-        res.render("edicionProductos", { product });
+        const id = req.params.id
+        productServices.getProduct(id).then((product)=>{
+            res.render("edicionProductos", { product });
+        })
     },
     // Edición de productos - a donde se envía el formulario
     update: (req, res) => {
         const product = req.body;
         const id = req.params.id;
-        const image = req.file? req.file.filename: productServices.getProduct(id).image;
-        product.image = image;
-        productServices.updateProduct(id, product);
-        res.redirect("/productos");
+        productServices.updateProduct(id, product).then(()=> {
+            res.redirect("/productos");
+        })        
       },
     // Eliminación de un producto
     delete: (req, res) => {
         const idProd = req.params.id;
-        console.log(`deleting product id: ${idProd}`);
-        res.redirect("/inicioprodu");
-    },
+        productServices.deleteProduct(idProd).then(()=>{
+            res.redirect("/inicioprodu");
+        })        
+    }/* ,
+    welcome: (req, res) => {
+        const data = req.session.userData
+        res.render("welcome", {
+            username: data.username,
+            password: data.password 
+        })
+    } */
 }
 
 module.exports= controller
