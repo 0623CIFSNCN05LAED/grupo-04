@@ -68,6 +68,7 @@
     </div> -->
 
     <main> 
+    <main> 
 
         <div class="formulario">
         
@@ -77,74 +78,90 @@
 
                 <div class="flex flex-wrap w-50 jcl h-a">
                     <label for="username" class="fs-16"> Nombre de usuario</label>
-                    <input type="text" name="username" id="username" class="w-100 fs-16 fc-darkgrey h-a" placeholder="Ingrese nombre de usuario" value="<%= locals.old && old.username %>">
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto h-a">
+                        <input type="text" name="username" id="username" class="w-100 fs-16 fc-darkgrey h-a" placeholder="Ingrese nombre de usuario" value="<%= locals.old && old.username %>">
                         <% if (locals.errors && errors.username) { %>
                             <%= errors.username.msg %>
                         <% } %>
+                    </p>
                     <span class="errorMessage" id="usernameError"></span>
                 </div>
                 
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="email" class="fs-16"> E-mail</label>
-                    <input type="text" name="email" id="email" class="w-100 fs-16 fc-darkgrey" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                      <input type="text" name="email" id="email" class="w-100 fs-16 fc-darkgrey" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
                     <% if (locals.errors && errors.email) { %>
                         <%= errors.email.msg %>
-                    <% } %>
+                    <% } %>  
+                    </p>
                     <span class="errorMessage" id="emailError"></span>
                 </div>
 
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="password" class="fs-16"> Contraseña</label>
-                    <input type="password" name="password" id="password" class="w-100 fs-16 fc-grey" placeholder="Ingrese contraseña" value="<%= locals.old && old.password %>">
-                    <% if (locals.errors && errors.password) { %>
-                        <%= errors.password.msg %>
-                    <% } %>
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                       <input type="password" name="password" id="password" class="w-100 fs-16 fc-grey" placeholder="Ingrese contraseña" value="<%= locals.old && old.password %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <%= errors.password.msg %>
+                        <% } %> 
+                    </p>
                     <span class="errorMessage" id="passwordError"></span>
                 </div>
 
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="name" class="fs-16"> Nombre y apellido</label>
-                    <input type="text" name="name" id="name" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese nombre y apellido" value="<%= locals.old && old.namesurname %>">
-                    <% if (locals.errors && errors.name) { %>
-                        <%= errors.name.msg %>
-                    <% } %>
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                      <input type="text" name="name" id="name" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese nombre y apellido" value="<%= locals.old && old.namesurname %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <%= errors.name.msg %>
+                        <% } %>  
+                    </p>
                     <span class="errorMessage" id="nameError"></span>
                 </div>
                 
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="dni" class="fs-16"> DNI</label>
-                    <input type="number" name="dni" id="dni" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese DNI" value="<%= locals.old && old.dni %>">
-                    <% if (locals.errors && errors.dni) { %>
-                        <%= errors.dni.msg %>
-                    <% } %>
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                      <input type="number" name="dni" id="dni" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese DNI" value="<%= locals.old && old.dni %>">
+                        <% if (locals.errors && errors.dni) { %>
+                            <%= errors.dni.msg %>
+                        <% } %>  
+                    </p>
                     <span class="errorMessage" id="dniError"></span>
                 </div>
 
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="home" class="fs-16"> Domicilio</label>
-                    <input type="text" name="home" id="home" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese domicilio" value="<%= locals.old && old.home %>">
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                        <input type="text" name="home" id="home" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese domicilio" value="<%= locals.old && old.home %>">
                     <% if (locals.errors && errors.home) { %>
                         <%= errors.home.msg %>
                     <% } %>
+                    </p>
                     <span class="errorMessage" id="homeError"></span>
                 </div>
                 
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="phone_number" class="fs-16"> Teléfono</label>
-                    <input type="tel" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old && old.phone %>">
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                       <input type="tel" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old && old.phone %>">
                     <% if (locals.errors && errors.phone_number) { %>
                         <%= errors.phone_number.msg %>
-                    <% } %>
+                    <% } %> 
+                    </p>
                     <span class="errorMessage" id="phone_numberError"></span>
                 </div>
 
                 
                 <div class="image">
                     <label for="image">Imagen:</label>
-                    <input type="file" id="image" name="image" value="<%= locals.old && old.image %>"> 
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                       <input type="file" id="image" name="image" value="<%= locals.old && old.image %>"> 
                     <% if (locals.errors && errors.image) { %>
                         <%= errors.image.msg %>
-                    <% } %>
+                    <% } %> 
+                    </p>
                     <span class="errorMessage" id="imageError"></span>
                 </div>
 
