@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!- footer -->
+      <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Animalandia</title> 
+    <link rel="stylesheet" href="/css/styles-login.css">
+    <!-- <! footer --> 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -67,11 +69,11 @@
     
     -->
 
-      <div class="formulario">
+      <div class="wrapper">
 
         <h1>Iniciar Sesión</h1>
 
-      <form method="post" class="form-login" action="/usuarios/login" id="form-login">
+      <form method="post" class="form-signin" action="/usuarios/login" id="form-login">
 
         <p id="incorrect" name="incorrect">
           <% if (locals.errors && errors.incorrect) { %>
@@ -79,8 +81,8 @@
            <% } %>
         </p>
 
-        <div class="email">
-            <input type="text" id="email" name="email" placeholder="Correo electronico" value="<%= locals.old && old.email %>">
+        <div class="form-signin-heading">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Correo electronico" value="<%= locals.old && old.email %>">
             <% if (locals.errors && errors.email) { %>
               <%= errors.email.msg %>
             <% } %>
@@ -88,72 +90,89 @@
         </div>
     
         <div class="contraseña">
-            <input type="password" id="password" name="password" placeholder="Contraseña" value="<%= locals.old && old.password %>">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" value="<%= locals.old && old.password %>">
             <% if (locals.errors && errors.password) { %>
               <%= errors.password.msg %>
             <% } %>
             <span class="errorMessage" id="passwordError"></span>
         </div>
 
-        <div class="inicio">
-            <input type="submit" value="Entrar">
+        <div class="btn btn-lg btn-primary btn-block">
+            <input type="submit" value="Iniciar">
         </div>
 
 
-        <!-- <div class="recordar">¿Olvido su contraseña?</div> -->
+        <div class="recordar">¿Olvido su contraseña?</div>
 
         <div class="registrarse">
-            Registrate <a href="/usuarios/registro">Aqui</a>
+            Registrate <a href="#">Aqui</a>
         </div>
          </form>
       </div>
 
-     <!-- footer -->
-     <%-include("partials/footer") %>  
-<!-- <footer class="mainfooter" role="contentinfo">
-    <div class="footer-middle">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <!-Column1-->
-          <!-- <div class="footer-pad">
-            <h4>Nosotros</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Sobre Animalandia</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Trabaja con Nosotros</a></li>
-              
-            </ul> -->
-          <!-- </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          Column1
-          <div class="footer-pad">
-            <h4>Servicios</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Veterinaria</a></li>
-              <li><a href="#">Peluqueria</a></li>
-              <li><a href="#">Microchips</a></li>
-              <li><a href="#">Adopciones</a></li>
-              
-            </ul> -->
-          <!-- </div>
-        </div> -->
-        <!-- <div class="col-md-3 col-sm-6">
-          <!-Column1-->
-          <!-- <div class="footer-pad">
-            <h4>Contacto</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Atención Teléfonico: Numero</a></li>
-              <li><a href="#">Atención Whatsapp: Numero</a></li>
-              <li><a href="#">Lunes a Sábados de 9 a 21 hs, Domingos de 10 a 20 hs</a></li>
-               --> 
-      <!-- <div class="row">
-          <div class="col-md-12 copy">
-              <p class="text-center">&copy; Copyright 2023 - Animalandia. Todos los Derechos Reservados.</p>
+         <!-- footer -->
+    <%-include("partials/footer") %>  
+    <!-- <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <!Column1-->
+              <!-- <div class="footer-pad">
+                <h4>Nosotros</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Sobre Animalandia</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Trabaja con Nosotros</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!-Column1-->
+              <!-- <div class="footer-pad">
+                <h4>Servicios</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Veterinaria</a></li>
+                  <li><a href="#">Peluqueria</a></li>
+                  <li><a href="#">Microchips</a></li>
+                  <li><a href="#">Adopciones</a></li>
+                  
+                </ul>
+              </div>
+            </div> -->
+            <!-- <div class="col-md-3 col-sm-6">
+              <!-Column1-->
+              <!-- <div class="footer-pad">
+                <h4>Contacto</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Atención Teléfonico: Numero</a></li>
+                  <li><a href="#">Atención Whatsapp: Numero</a></li>
+                  <li><a href="#">Lunes a Sábados de 9 a 21 hs, Domingos de 10 a 20 hs</a></li>
+                  
+                    <a href="#"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+              <div class="col-md-3">
+                  <h4>Síguenos</h4>
+                  <ul class="social-network social-circle">
+                   <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                  </ul>				
+              </div>
           </div>
-      </div>
-    </footer>
+          <div class="row">
+              <div class="col-md-12 copy">
+                  <p class="text-center">&copy; Copyright 2023 - Animalandia. Todos los Derechos Reservados.</p>
+              </div>
+          </div>
+       
+      
+        </div>
+        </div>
+      </footer> -->
 
 </body>
 </html>

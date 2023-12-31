@@ -15,7 +15,7 @@
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" > -->
 
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/stylesProductDetails.css"> 
     <title>Carrito de compras</title>
     <%-include("partials/head") %> 
 </head>
@@ -29,9 +29,7 @@
             <img src="/images/logo.png" >
             </div>  
             <nav>
-                <form class="search" action="search.css"> 
-                    <input name="q" placeholder="Search..." type="search">
-                </form>
+                
                 <ul>
                     <li>
                         <a href="">Home</a>
@@ -60,65 +58,127 @@
                 </ul>
             </nav>
         </div-->
-    
-    <main class="bg-color-main">
-        <section>
-            <fieldset class="flex border-field-carrito">
-                <div>
-                    <h1 class="center w-90">CARRITO DE COMPRAS</h1>
-                </div>
-                <button class="button-home"><i class="fa-solid fa-xmark align-center"><a href="/"></a></i></button>
-            </fieldset>
-            <fieldset class="flex-product border-field">
-                <div class="flex">
-                    <img src="/images/descarga.jpg" alt="producto" class="img img-gen">
-                    <div >
-                        <img src="/images/descarga.jpg" alt="prod1" class="border row-azu img-gen img-prod">
-                        <img src="/images/descarga.jpg" alt="prod2" class="border row-azu img-gen img-prod">
-                        <img src="/images/descarga.jpg" alt="prod3" class="border row-azu img-gen img-prod">
-                    </div>
-                    
-                </div>
-                <div>
-                    <h2>Nombre del producto</h2> 
-                    <h5 class="t-5">Descripción del producto</h5>
-                    <input type="number" name="cantidad" min="1" class="form-cantidad">     
-                </div>
-                <i class="fa-solid fa-trash trash"></i>         
-            </fieldset>
-            <fieldset class="border-field-entrega">
-                <h3>ENTREGA DEL PEDIDO</h3>
-            </fieldset>
-            <fieldset class="border-field">                
-                <div class="minus">
-                    <h3 class="m-envio">MEDIOS DE ENVÍO  <button class="button-home">v</button></h3>
-                    <div class="hide-minus">
-                        <div class="flex">
-                            <input type="text" name="postal" placeholder="Indique su código postal" class="flex form-postal"><button class="flex form-calculo">CALCULAR</button>
+
+
+        <% products.forEach(product => { %>
+          <%- include("partials/pCart", {product}) %>
+       <% }) %>
+        <main>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-8">
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <h5><span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compra</h5>
                         </div>
-                        <h5 class="t-4"><a href="https://www.correoargentino.com.ar/formularios/cpa">NO SÉ MI CODIGO POSTAL</a></h5>
+                        <div class="col-xs-6">
+                          <button type="button" class="btn btn-primary btn-sm btn-block">
+                            <span class="glyphicon glyphicon-share-alt"></span> Sigue Comprando
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                </div>      
-            </fieldset>
-            <fieldset class="border-field">
-                <div class="plus">
-                    <h3 class="m-envio">NUESTRO LOCAL  <button class="button-home">v</button></h3>
-                    <div class="hide-plus">
-                        <p><input type="checkbox" name="retiro" class="local"> Retiro en el local</p>
-                    </div>                     
-                </div>                              
-            </fieldset>
-            <fieldset class="border-field-pago">
-                <div class="flex-product-pago">
-                    <h3 class="w-80">Total a pagar</h3> 
-                    <i class="fa-solid fa-dollar-sign"></i> 
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+                      </div>
+                      <div class="col-xs-4">
+                        <h4 class="product-name"><strong>Producto</strong></h4>
+                        <h4><small>descripcion</small></h4>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="col-xs-6 text-right">
+                          <h6><span class="text-muted">$</span><strong>25.00 </strong></h6>
+                        </div>
+                        <div class="col-xs-4">
+                          <input type="text" class="form-control input-sm" value="1">
+                        </div>
+                        <div class="col-xs-2">
+                          <button type="button" class="btn btn-link btn-xs">
+                            <span class="glyphicon glyphicon-trash"> </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+                      </div>
+                      <div class="col-xs-4">
+                        <h4 class="product-name"><strong>Producto</strong></h4>
+                        <h4><small>descripcion</small></h4>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="col-xs-6 text-right">
+                          <h6><span class="text-muted">$</span><strong>25.00 </strong></h6>
+                        </div>
+                        <div class="col-xs-4">
+                          <input type="text" class="form-control input-sm" value="1">
+                        </div>
+                        <div class="col-xs-2">
+                          <button type="button" class="btn btn-link btn-xs">
+                            <span class="glyphicon glyphicon-trash"> </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="text-center">
+                        <div class="col-xs-9">
+                          <h6 class="text-right">Agrego productos?</h6>
+                        </div>
+                        <div class="col-xs-3">
+                          <button type="button" class="btn btn-default btn-sm btn-block">
+                            Actualizar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                    <div class="row text-center">
+                      <div class="col-xs-9">
+                        <h4 class="text-right">Total <strong>$50.00</strong></h4>
+                      </div>
+                      <div class="col-xs-3">
+                        <button type="button" class="btn btn-success btn-block">
+                          Comprar!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="b-space">
-                    <button class="">INICIAR COMPRA</button>
-                </div>                  
-            </fieldset>
-        </section>
-    </main>
+              </div>
+            </div>
+          </div>
+          </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+
     <!-- footer -->
     <%-include("partials/footer") %>  
     <!-- <footer class="mainfooter" role="contentinfo">

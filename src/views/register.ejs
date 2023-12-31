@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- footer -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css"> -->
     <link rel="stylesheet" href="/css/styles_register.css">
     <script src="/js/script.js" defer></script>
     <!-- DESPUES PASARLO A CSS -->
@@ -23,20 +23,20 @@
             color: orange
         }
     </style>
+    <%-include("partials/head") %>
     <title>Registro</title>
 </head>
 
 <body>
 
     <!-- header -->
-    <div id="header">
+    <%-include("partials/header") %>
+    <!-- <div id="header">
         <div class="logo">
             <img src="/images/logo.png">
         </div>
         <nav>
-            <form class="search" action="search.css">
-                <input name="q" placeholder="Search..." type="search">
-            </form>
+            
             <ul>
                 <li>
                     <a href="">Home</a>
@@ -65,9 +65,9 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </div> -->
 
-    <main>
+    <main> 
 
         <div class="formulario">
         
@@ -167,14 +167,14 @@
 
 
     <!-- footer -->
-
-    <footer class="mainfooter" role="contentinfo">
+    <%-include("partials/footer") %>
+    <!-- <footer class="mainfooter" role="contentinfo">
         <div class="footer-middle">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6"> -->
                         <!--Column1-->
-                        <div class="footer-pad">
+                        <!-- <div class="footer-pad">
                             <h4>Nosotros</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Sobre Animalandia</a></li>
@@ -184,9 +184,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6"> -->
                         <!--Column1-->
-                        <div class="footer-pad">
+                        <!-- <div class="footer-pad">
                             <h4>Servicios</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Veterinaria</a></li>
@@ -197,9 +197,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6"> -->
                         <!--Column1-->
-                        <div class="footer-pad">
+                        <!-- <div class="footer-pad">
                             <h4>Contacto</h4>
                             <ul class="list-unstyled">
                                 <li><a href="#">Atención Teléfonico: Numero</a></li>
@@ -229,7 +229,7 @@
 
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 </body>
 

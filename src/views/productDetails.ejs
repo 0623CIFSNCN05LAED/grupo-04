@@ -3,14 +3,16 @@
 <head>
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <!-- <link rel="stylesheet" href="/css/stylesProductDetails.css"> -->
+    <!--  <link rel="stylesheet" href="/css/stylesFooter.css"> -->
+    <!-- <link rel="stylesheet" href="/css/stylesHeader.css"> -->
+    <link rel="stylesheet" href="/css/stylesProductDetails.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
 
-    <title>Detalles de Producto</title>
-    <%-include("partials/head") %>
+    <title>Detalles de <%= product.name %></title>
+    <%-include("partials/head") %> 
 </head>
 <body>
 <!-- <header> -->
@@ -22,9 +24,7 @@
       <img src="/images/logo.png" >
     </div>  
     <nav>
-      <form class="search" action="search.css"> 
-        <input name="q" placeholder="Search..." type="search">
-      </form>
+      
       <ul>
         <li>
           <a href="">Home</a>
@@ -57,40 +57,41 @@
 </header> -->
 
 <main>
-  <div class="title-images">
+  <%- include("partials/producto", {product}) %>
+  <!-- <div class="title-images">
   
     <div class="prod-title">
-      <p class="s-16 fw-600"> <%- product.name %></p>
+      <p class="s-16 fw-600"> <%= product.name %></p>
     </div>
     <div class="img-container">
         <div class="small-images-col">
           <div class="small-image">
-            <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
-            <!-- <img src=" <%= product.images %>" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
+            <img src= "/images/products/<%=product.image %> " alt="product image" class="w-100 h-100 fit-contain" />
           </div>
           <div class="small-image">
-            <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
+            <img src= "/images/products/<%=product.image %> " alt="product image" class="w-100 h-100 fit-contain" />
 
-            <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
           <div class="small-image">
-            <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
+            <img src= "/images/products/<%=product.image %> " alt="product image" class="w-100 h-100 fit-contain" />
+            
           </div>
         </div>
         <div class="selected-image">
-          <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
+          <img src= "/images/products/<%=product.image %> " alt="product image" class="w-100 h-100 fit-contain" />
+
         </div>
     </div>
   </div>
   <div class="name-description">
     <div class="prod-name">
-      <p class="s-14"> <%-product.description %> </p>
+      <p class="s-14"> <%=product.description %> </p>
     </div>
     <div class="prod-description">
       <ul class="style-none">
-        <li><%- product.name %></li>
-        <li><%- product.taste %></li>
-        <li><%- product.weight %></li>
+        <li><%= product.name %></li>
+        <li><%= product.taste %></li>
+        <li><%= product.weight %></li>
         <li>Las imágenes son ilustrativas. El producto puede variar según el peso.</li>
       </ul>
     </div>
@@ -112,7 +113,7 @@
           <button type="submit" class="s-14 button-carrito">AÑADIR AL CARRITO</button>
         </div>
     </div>
-  </div>
+  </div> -->
 </main>
 <%-include("partials/footer") %> 
 <!-- <footer class="mainfooter" role="contentinfo">
