@@ -12,6 +12,17 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/styles_register.css">
+    <script src="/js/script.js" defer></script>
+    <!-- DESPUES PASARLO A CSS -->
+    <style>
+        .errorMessage{
+            display: none;
+        }
+        .displayOk{
+            display:block;
+            color: orange
+        }
+    </style>
     <title>Registro</title>
 </head>
 
@@ -59,78 +70,94 @@
     <main>
 
         <div class="formulario">
-
+        
             <h1>Registro de usuario nuevo</h1>
 
-            <form action="/registro" method="post" class="flex flex-wrap w-100 flex-dir-col h-a">
+            <form action="/usuarios/registro" method="post" class="flex flex-wrap w-100 flex-dir-col h-a register" enctype="multipart/form-data" id="form-register">
 
-                <p class="flex  flex-wrap w-50 jcl h-a">
-                    <label for="nombre_usuario" class="fs-16"> Nombre de usuario</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto h-a">
-                    <input type="text" name="nombre_usuario" id="nombre_usuario" class="w-100 fs-16 fc-darkgrey h-a"
-                        placeholder="Ingrese nombre de usuario">
-                </p>
+                <div class="flex flex-wrap w-50 jcl h-a">
+                    <label for="username" class="fs-16"> Nombre de usuario</label>
+                    <input type="text" name="username" id="username" class="w-100 fs-16 fc-darkgrey h-a" placeholder="Ingrese nombre de usuario" value="<%= locals.old && old.username %>">
+                        <% if (locals.errors && errors.username) { %>
+                            <%= errors.username.msg %>
+                        <% } %>
+                    <span class="errorMessage" id="usernameError"></span>
+                </div>
+                
+                <div class="flex  flex-wrap w-50 jcl">
+                    <label for="email" class="fs-16"> E-mail</label>
+                    <input type="text" name="email" id="email" class="w-100 fs-16 fc-darkgrey" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <%= errors.email.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="emailError"></span>
+                </div>
 
-                <p class="flex  flex-wrap w-50 jcl">
-                    <label for="email" class="fs-16"> e-mail</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                    <input type="text" name="nombre_usuario" id="nombre_usuario" class="w-100 fs-16 fc-darkgrey"
-                        placeholder="Ingrese nombre de usuario">
-                </p>
-
-                <p class="flex  flex-wrap w-50 jcl">
+                <div class="flex  flex-wrap w-50 jcl">
                     <label for="password" class="fs-16"> Contraseña</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                    <input type="password" name="password" id="password" class="w-100 fs-16 fc-grey"
-                        placeholder="Ingrese contraseña">
-                </p>
+                    <input type="password" name="password" id="password" class="w-100 fs-16 fc-grey" placeholder="Ingrese contraseña" value="<%= locals.old && old.password %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <%= errors.password.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="passwordError"></span>
+                </div>
 
-                <p class="flex  flex-wrap w-50 jcl">
-                    <label for="nombre_apellido" class="fs-16"> Nombre y apellido</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                    <input type="text" name="nombre_apellido" id="nombre_apellido" class="w-100 fs-1 fc-darkgrey"
-                        placeholder="Ingrese nombre y apellido">
-                </p>
-
-                <p class="flex  flex-wrap w-50 jcl">
+                <div class="flex  flex-wrap w-50 jcl">
+                    <label for="name" class="fs-16"> Nombre y apellido</label>
+                    <input type="text" name="name" id="name" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese nombre y apellido" value="<%= locals.old && old.namesurname %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <%= errors.name.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="nameError"></span>
+                </div>
+                
+                <div class="flex  flex-wrap w-50 jcl">
                     <label for="dni" class="fs-16"> DNI</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                    <input type="number" name="dni" id="dni" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese DNI">
-                </p>
+                    <input type="number" name="dni" id="dni" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese DNI" value="<%= locals.old && old.dni %>">
+                    <% if (locals.errors && errors.dni) { %>
+                        <%= errors.dni.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="dniError"></span>
+                </div>
 
-                <p class="flex  flex-wrap w-50 jcl">
-                    <label for="domicilio" class="fs-16"> Domicilio</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                    <input type="text" name="domicilio" id="dni" class="w-100 fs-1 fc-darkgrey"
-                        placeholder="Ingrese domicilio">
-                </p>
+                <div class="flex  flex-wrap w-50 jcl">
+                    <label for="home" class="fs-16"> Domicilio</label>
+                    <input type="text" name="home" id="home" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese domicilio" value="<%= locals.old && old.home %>">
+                    <% if (locals.errors && errors.home) { %>
+                        <%= errors.home.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="homeError"></span>
+                </div>
+                
+                <div class="flex  flex-wrap w-50 jcl">
+                    <label for="phone_number" class="fs-16"> Teléfono</label>
+                    <input type="tel" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old && old.phone %>">
+                    <% if (locals.errors && errors.phone_number) { %>
+                        <%= errors.phone_number.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="phone_numberError"></span>
+                </div>
 
-                <p class="flex  flex-wrap w-50 jcl">
-                    <label for="telefono" class="fs-16"> Telefono</label>
-                </p>
-                <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                    <input type="tel" name="telefono" id="telefono" class="w-100 fs-1 fc-darkgrey"
-                        placeholder="Ingrese numero telefonico">
-                </p>
-
+                
+                <div class="image">
+                    <label for="image">Imagen:</label>
+                    <input type="file" id="image" name="image" value="<%= locals.old && old.image %>"> 
+                    <% if (locals.errors && errors.image) { %>
+                        <%= errors.image.msg %>
+                    <% } %>
+                    <span class="errorMessage" id="imageError"></span>
+                </div>
 
                 <div class="flex f-ss fw-400">
-                    <button type="submit" class="fw-400 p-1 fs-16 bcg-darkgrey mr-1 border-radius w-50 ml-1"><span
-                            class="fw-400 f-ss p-1">Ingresar</span></button>
-
+                    <input type="submit" class="fw-400 p-1 fs-16 bcg-darkgrey mr-1 border-radius w-50 ml-1">
+                    
                     <input type="checkbox" name="recuerdame" id="recuerdame"> <span
                         class="fw-400 f-ss fs-12 p-1 justify-center my-auto">
                         Recuerdame</span>
                 </div>
-                <a href="#">Olvidaste tu contraseña</a>
+                <!-- <a href="#">Olvidaste tu contraseña</a> -->
 
-
+                </form>
 
         </div>
 

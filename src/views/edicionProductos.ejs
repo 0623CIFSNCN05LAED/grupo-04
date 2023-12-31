@@ -12,6 +12,16 @@
     <%-include("partials/head") %>      
 
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/scriptprod.js" defer></script>
+    <style>
+      .errorMsg{
+          display: none;
+      }
+      .displayOk{
+          display:block;
+          color: orange
+      }
+  </style>
     <title>Edicion de productos</title>
 
 </head>
@@ -63,54 +73,62 @@
 </header> -->
 
 
-      <form action="/productos/<%= product.id %>?_method=put" method="post" class="form-products">
+      <form action="/productos/<%= product.id %>?_method=put" method="post" class="form-products" id="form-prod">
 
         <!-- Nombre del producto -->
         <div class="name of product">
           <label for="name">Nombre del Producto:</label>
-          <input type="text" id="name" name="name" required value="<%= product.name %>"></input>
+          <input type="text" id="name" name="name" value="<%= product.name %>">
+          <span class="errorMessage" id="nameError"></span>
       </div>
 
       <!-- Sabor -->
       <div class="taste of product">
         <label for="taste">Sabor:</label>
-        <input type="text" id="taste" name="taste" required value="<%= product.taste %>"></input>
+        <input type="text" id="taste" name="taste" value="<%= product.taste %>">
+        <span class="errorMsg" id="tasteError"></span>
       </div>
 
       <!-- Peso -->
       <div class="weigth">
           <label for="weight">Peso:</label>
-          <input type="text" id="weight" name="weight" value="<%= product.weight %>"> </input>
+          <input type="text" id="weight" name="weight" value="<%= product.weight %>"> 
+          <span class="errorMsg" id="weightError"></span>
       </div>
 
       <!-- Categoría -->
       <div class="category">
           <label for="category">Categoría:</label>
-          <input type="text" id="category" name="category" required value="<%= product.category %>"> </input>
+          <input type="text" id="category" name="category" value="<%= product.category %>">
+          <span class="errorMsg" id="categoryError"></span>
       </div>
 
       <!-- Imagen -->
       <div class="image">
           <label for="image">Imagen:</label>
-          <input type="file" id="image" name="image" required value="<%= product.image %>"> </input>
+          <input type="file" id="image" name="image" value="<%= product.image %>">
+          <span class="errorMsg" id="imageError"></span>
       </div>
 
       <!-- Descripción -->
       <div class="description">
         <label for="description">Descripción:</label>
-        <textarea id="description" name="description" rows="4" required value="<%= product.description %>"></textarea>
+        <textarea id="description" name="description" rows="4" value="<%= product.description %>"></textarea>
+        <span class="errorMsg" id="descriptionError"></span>
       </div>
 
       <!-- Edad -->
       <div class="age">
         <label for="age">Destinado para (Adulto, Gatito, etc):</label>
-        <input type="text" id="age" name="age" required value="<%= product.age %>"></input>
+        <input type="text" id="age" name="age" value="<%= product.age %>">
+        <span class="errorMsg" id="ageError"></span>
       </div>
 
       <!-- Precio -->
       <div class="price">
           <label for="price">Precio:</label>
-          <input type="number" id="price" name="price" step="0.01" accept="image/*" required value="<%= product.price %>"></input>
+          <input type="number" id="price" name="price" step="0.01" value="<%= product.price %>">
+          <span class="errorMsg" id="priceError"></span>
       </div>
 
       <!-- Botón de envío -->

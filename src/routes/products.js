@@ -5,7 +5,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
-       cb(null, './public/images'); 
+       cb(null, './public/images/products'); 
     }, 
     filename: function (req, file, cb) { 
        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
@@ -14,9 +14,10 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 const productsControllers = require("../controllers/productControllers");
+const check= require("../middlewares/user-Check")
 
 // Todos los productos
-router.get("/productos", productsControllers.all)
+router.get("/productos", check, productsControllers.all)
 // Creación de un producto
 router.get("/productos/crear/", productsControllers.create);
 router.post("/productos", uploadFile.single("image"),productsControllers.save); 
@@ -26,7 +27,6 @@ router.get("/productos/:id", productsControllers.product)
 router.get("/productos/editar/:id", productsControllers.edit)
 router.put("/productos/:id", productsControllers.update)
 // Eliminar un producto
-// Modificar todo el productDetails para visualizar el producto a editar
 router.delete("/productos/:id",productsControllers.delete)
 
 module.exports= router;

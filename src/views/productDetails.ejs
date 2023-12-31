@@ -3,8 +3,6 @@
 <head>
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-     <link rel="stylesheet" href="/css/stylesFooter.css">
-    <!-- <link rel="stylesheet" href="/css/stylesHeader.css"> -->
     <!-- <link rel="stylesheet" href="/css/stylesProductDetails.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +10,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
 
     <title>Detalles de Producto</title>
-    <%-include("partials/head") %> 
+    <%-include("partials/head") %>
 </head>
 <body>
 <!-- <header> -->
@@ -67,24 +65,20 @@
     <div class="img-container">
         <div class="small-images-col">
           <div class="small-image">
-            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+            <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
             <!-- <img src=" <%= product.images %>" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
           <div class="small-image">
-            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
+            <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
 
             <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
           </div>
           <div class="small-image">
-            <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
-
-            <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
+            <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
           </div>
         </div>
         <div class="selected-image">
-          <img src= "/public/images/<%-product.images %> " alt="product image" class="product-detail-img" />
-
-          <!-- <img src="/productImages/comidaParaGatosCastrados.png" alt="img-comida-gatos-castrados" class="w-100 h-100 fit-contain"> -->
+          <img src= "/images/products/<%-product.image %> " alt="product image" class="product-detail-img w-100 h-100 fit-contain" />
         </div>
     </div>
   </div>
