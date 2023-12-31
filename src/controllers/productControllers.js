@@ -30,8 +30,8 @@ const controller = {
     // Detalle de un producto particular
     product: (req, res) => {
         const id = req.params.id;
-        const producto = productServices.getProduct(id);
-        res.render("productDetails", {producto})
+        const product = productServices.getProduct(id);
+        res.render("productDetails", {product})
     },
     // Capto el producto a editar
     edit: (req, res) => {
