@@ -86,16 +86,5 @@
     "description": "El Alimento Húmedo Wild Cordero Y Pavo es una opción de alta calidad que busca proporcionar el retorno al origen instintivo de la alimentación canina. Este alimento se destaca por su selección de carnes frescas como alternativa a la carne vacuna, brindando a tu perro una experiencia de sabor real, natural y proporcionándole los aminoácidos esenciales y no esenciales necesarios para su bienestar y funciones fisiológicas.",
     "age": "Cachorro, Adulto, Adulto Senior",
     "price": 1890
-  },
-  {
-    "id": "e0fa740a-a4ac-42ed-accd-9c08b23d2175",
-    "name": "Comida Royal Canin",
-    "taste": "Pescado",
-    "weight": "3kg",
-    "category": "Gatos adultos",
-    "image": "1700527045309_img_.jpg",
-    "description": "Comida para gatos castrados",
-    "age": "Adulto",
-    "price": 5860
   }
 ]
