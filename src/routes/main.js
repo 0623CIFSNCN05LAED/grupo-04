@@ -11,6 +11,8 @@ router.get("/productDetails", mainControllers.detallesDeProducto);
 
 // Para utilizar un solo punto de ruteo
 const productsRouter = require("./products");
+const usersRouter = require("./users")
 router.use("/", productsRouter);
+router.use("/", usersRouter)
 
 module.exports = router;

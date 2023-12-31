@@ -1,25 +1,56 @@
-const db = require("../data/db");
+const {Products} = require("../database/models");
 
 const productServices = {
     getAll: () => {
-        const products = db.products.findProducts();
-        return products
-    },
+        return Products.findAll();
+    }, 
     getProduct: (id) => {
-        const product= db.products.findById(id);
-        return product
+        return Products.findByPk(id).then((product)=>({
+            id: product.id,
+            name: product.name,
+            taste: product.taste,
+            weight: product.weight,
+            category: product.category,
+            image: product.image,
+            description: product.description,
+            age: product.age,
+            price: product.price,   
+        }))
     },
-    createProduct: (product) => {
-        const creation = db.products.create(product);
-        return creation
+    createProduct: (body) => {
+        return Products.create({
+            id: body.id,
+            name: body.name,
+            taste: body.taste,
+            weight: body.weight,
+            category: body.category,
+            image: body.image,
+            description: body.description,
+            age: body.age,
+            price: body.price,
+            id_user: body.id_user,
+        })
     },
-    updateProduct: (id, product) => {
-        const updateProd = db.products.update(id, product);
-        return updateProd
+    updateProduct: (id) => {
+        return Products.update({
+            id: body.id,
+            name: body.name,
+            taste: body.taste,
+            weight: body.weight,
+            category: body.category,
+            image: body.image,
+            description: body.description,
+            age: body.age,
+            price: body.price,
+            id_user: body.id_user,
+        },{
+            where:{ id : id }
+        })
     },
     deleteProduct: (id) => {
-        const deleteProd = db.products.delete(id);
-        return deleteProd
+        return Products.destroy({
+            where:{ id : id }
+        })
     },
 }
 
