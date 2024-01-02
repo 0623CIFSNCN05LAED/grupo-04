@@ -85,7 +85,7 @@ nav{
 }
 
 
-nav>ul{
+nav ul{
   float:left;
   position:relative
 }
@@ -105,7 +105,7 @@ nav li a{
   float:left;
   padding:35px
 }
-nav li a:hover{
+nav ul li a:hover{
 background:#F1915D;
 }
 nav li ul{

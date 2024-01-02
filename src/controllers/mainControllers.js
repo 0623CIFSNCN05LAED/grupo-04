@@ -4,10 +4,7 @@ const productServices = require("../services/productServices");
 const controller = {
   home: (req, res) => {
     res.render("home");
-  },
-  carrito: (req, res) => {
-    res.render("productCart");
-  },
+  },  
   detallesDeProducto: (req, res) => {
   res.render("productDetails");
  },
