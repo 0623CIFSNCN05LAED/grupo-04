@@ -70,7 +70,7 @@
     <main> 
 
         <div class="formulario">
-        
+           
             <h1 class="form-signin-heading">Registro de usuario nuevo</h1>
 
             <form action="/usuarios/registro" method="post" class="flex flex-wrap w-100 flex-dir-col h-a register" enctype="multipart/form-data" id="form-register">
@@ -78,7 +78,7 @@
                 <div class="flex flex-wrap w-50 jcl h-a">
                     <label for="username" class="fs-16"> Nombre de usuario</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto h-a">
-                        <input type="text" name="username" id="username" class="w-100 fs-16 fc-darkgrey h-a" placeholder="Ingrese nombre de usuario" value="<%= locals.old && old.username %>">
+                        <input type="text" name="username" id="username" class="w-100 fs-16 fc-darkgrey h-a" placeholder="Ingrese nombre de usuario" value="<%= locals.old? old.username : null %>">
                         <% if (locals.errors && errors.username) { %>
                             <%= errors.username.msg %>
                         <% } %>
@@ -89,7 +89,7 @@
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="email" class="fs-16"> E-mail</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                      <input type="text" name="email" id="email" class="w-100 fs-16 fc-darkgrey" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
+                      <input type="text" name="email" id="email" class="w-100 fs-16 fc-darkgrey" placeholder="Ingrese su email" value="<%= locals.old? old.email : null %>">
                     <% if (locals.errors && errors.email) { %>
                         <%= errors.email.msg %>
                     <% } %>  
@@ -111,7 +111,7 @@
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="name" class="fs-16"> Nombre y apellido</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                      <input type="text" name="name" id="name" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese nombre y apellido" value="<%= locals.old && old.namesurname %>">
+                      <input type="text" name="name" id="name" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese nombre y apellido" value="<%= locals.old? old.name : null %>">
                         <% if (locals.errors && errors.name) { %>
                             <%= errors.name.msg %>
                         <% } %>  
@@ -122,7 +122,7 @@
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="dni" class="fs-16"> DNI</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                      <input type="number" name="dni" id="dni" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese DNI" value="<%= locals.old && old.dni %>">
+                      <input type="text" name="dni" id="dni" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese DNI" value="<%= locals.old? old.dni : null %>">
                         <% if (locals.errors && errors.dni) { %>
                             <%= errors.dni.msg %>
                         <% } %>  
@@ -133,7 +133,7 @@
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="home" class="fs-16"> Domicilio</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                        <input type="text" name="home" id="home" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese domicilio" value="<%= locals.old && old.home %>">
+                        <input type="text" name="home" id="home" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese domicilio" value="<%= locals.old? old.home : null %>">
                     <% if (locals.errors && errors.home) { %>
                         <%= errors.home.msg %>
                     <% } %>
@@ -144,7 +144,7 @@
                 <div class="flex  flex-wrap w-50 jcl">
                     <label for="phone_number" class="fs-16"> Teléfono</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                       <input type="tel" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old && old.phone %>">
+                       <input type="tel" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old? old.phone : null %>">
                     <% if (locals.errors && errors.phone_number) { %>
                         <%= errors.phone_number.msg %>
                     <% } %> 
@@ -156,7 +156,7 @@
                 <div class="image">
                     <label for="image">Imagen:</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                       <input type="file" id="image" name="image" value="<%= locals.old && old.image %>"> 
+                       <input type="file" id="image" name="image" value="<%= locals.old? old.image : null %>"> 
                     <% if (locals.errors && errors.image) { %>
                         <%= errors.image.msg %>
                     <% } %> 

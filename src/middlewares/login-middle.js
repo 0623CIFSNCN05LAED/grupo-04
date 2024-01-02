@@ -5,7 +5,7 @@ const loginMiddleware = (req, res, next) => {
     if (!errors.isEmpty()) {
         req.session.errors = errors.mapped();
         req.session.oldData = req.body;
-        res.redirect("/usuarios/login");
+        return res.redirect("/usuarios/login");
       } else {
         next();
       }

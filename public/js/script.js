@@ -21,8 +21,8 @@ const validations = [
   },
   {
     field: "dni",
-    check: (input) => input.value.length < 8 && input.value.length > 8,
-    message: "Debe contener 8 digitos",
+    check: (input) => !input.value,
+    message: "Debe completar el campo",
   },
   {
     field: "home",

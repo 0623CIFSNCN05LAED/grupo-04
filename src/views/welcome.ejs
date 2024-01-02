@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido/a <%= user.name %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <%-include("partials/head") %>
+</head>
+<body>
+    <%-include("partials/header") %>
+    <main>
+        <div>
+        ¡Hola <%= user.name %>, bienvenido nuevamente!
+        <img src="/images/users/<%= user.image%>">
+        <p><%= user.email %></p>
+    </div>
+    <form action="/">
+        <button type="submit">Ir a home</button>
+    </form>
+    </main>
+    <%-include("partials/footer") %>
+</body>
+</html>
