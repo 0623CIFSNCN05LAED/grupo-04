@@ -1,20 +1,25 @@
-<div class="col-12 col-sm-6 col-lg-3">
-    <section class="product-box">
-        <a href="/productos/<%= product.id %>">
-            <figure class="product-box_image">
-                <img src="/images/products/<%= product.image%>" alt="imagen de producto <%= product.name %>">
-            </figure>
-            <article class="product-box_data">
-                <h2><%= product.name%></h2>
-                <p><%= product.price %></p>
-                <!-- <i class="fas fa-truck"></i> -->
-            </article>
-        </a>
-        <p><%= product.weight %></p>
-        <p><%= product.taste %></p>
-        <p><%= product.category %></p>
-        <p><%= product.description %></p>
-        <p><%= product.age %></p>
 
-    </section>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+    <div class="item">
+      <img class="img-thumbnail" src="/images/products/<%= product.image%>"/>
+
+
+<div class="row text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h4 class="product-name"><%= product.name%></h4>
+    </div>
+    
+    <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+      <button class="btn btn-success add-to-cart" type="button">Carrito</button>
+    </div>
+    <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+        <button class="btn btn-success add-to-cart" type="button">Eliminar</button>
+      </div>
+      <div class="price">
+      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+        $<%= product.price %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

@@ -7,6 +7,13 @@ const controller = {
             res.render("inicioprodu", {product});
         })
     },
+    carrito: (req, res) => {
+        const id = req.params.id
+        productServices.getProduct(id).then((product)=>{
+            res.render("productCart", {product});
+        })
+
+    },
     // Creación de producto
     create: (req, res) => {
         res.render("productos")
