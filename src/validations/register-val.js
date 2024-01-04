@@ -26,10 +26,12 @@ const registerValidation = [
     .notEmpty().withMessage("Debe completar este campo"),
 
     body("phone_number")
-    .notEmpty().withMessage("Debe completar este campo"),
+    .notEmpty().withMessage("Debe completar este campo")
+]
 
-    body("image").custom((value, {req}) => {
-        const file = req.file
+module.exports = registerValidation
+
+/* const file = req.file
         const extensions = [".jpg", ".png", ".jpeg", ".gif"]
         
         if(!file){
@@ -39,8 +41,4 @@ const registerValidation = [
             if(!extensions.includes(fileExtensions)) {
                 throw new Error("Las extensiones permitidas son JPG, JPEG, PNG y GIF")
             }
-        }
-    })
-]
-
-module.exports = registerValidation
+        } */

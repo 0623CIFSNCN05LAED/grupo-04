@@ -1,34 +1,25 @@
 const usersServices = require("../services/usersServices");
 const bcrypt = require("bcryptjs")
-const {validationResult} = require("express-validator")
 
 const controller = {
     register: (req, res) => {
         res.render("register");
     },
     saveUser: (req, res) => {
-        const resultValidation = validationResult(req)
-        if(resultValidation.errors.length > 0){
-            return res.render("register", {
-                errors: resultValidation.mapped(),
-                old: req.body,
-            })
-        } else {
-            const user = {
-                username: req.body.username,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password,10),
-                name: req.body.name,
-                dni: Number(req.body.dni),
-                home: req.body.home,
-                phone_number: Number(req.body.phone_number),
-                image: req.file ? req.file.filename : "default-image.png",
-            } 
-            usersServices.createUser(user).then(()=>{
-                res.redirect("/")
-            })
-        }
-        
+        const user = {
+            username: req.body.username,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password,10),
+            name: req.body.name,
+            dni: Number(req.body.dni),
+            home: req.body.home,
+            phone_number: Number(req.body.phone_number),
+            image: req.file ? req.file.filename : "default-image.png",
+        } 
+        usersServices.createUser(user).then((user)=>{
+            req.session.userData = user
+            res.render("welcome", {user})
+        })
     },
     login: (req, res) => { 
         const errors = req.session.errors;
@@ -43,7 +34,9 @@ const controller = {
     success: (req, res) => {
         return usersServices.findByEmail(req.body.email).then((user)=>{
             if(user){
-                const passwordCheck = bcrypt.compare(req.body.password, user.password)
+                console.log(bcrypt.compareSync(req.body.password, user.password))
+                const passwordCheck = bcrypt.compareSync(req.body.password, user.password)
+                console.log(passwordCheck)
                 if(passwordCheck){
                     delete user.password
                     req.session.userData = user
@@ -68,7 +61,6 @@ const controller = {
         }) 
     },
     welcome: (req, res) => {
-        console.log(req.cookies.userCookie)
         return res.render("welcome", {
             user: req.session.userData
         })

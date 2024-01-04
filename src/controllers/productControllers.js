@@ -7,9 +7,16 @@ const controller = {
             res.render("inicioprodu", {product});
         })
     },
+    carrito: (req, res) => {
+        productServices.getAll().then((product)=>{
+            res.render("productCart", {product});
+        })
+    },
     // Creación de producto
     create: (req, res) => {
-        res.render("productos")
+        productServices.getAll().then((product)=>{
+            res.render("productos", {product});
+        })
     },
     // Creación - Almacenamiento de datos
     save: (req, res) => {
@@ -54,16 +61,9 @@ const controller = {
     delete: (req, res) => {
         const idProd = req.params.id;
         productServices.deleteProduct(idProd).then(()=>{
-            res.redirect("/inicioprodu");
+            res.redirect("/productos");
         })        
-    }/* ,
-    welcome: (req, res) => {
-        const data = req.session.userData
-        res.render("welcome", {
-            username: data.username,
-            password: data.password 
-        })
-    } */
+    }
 }
 
 module.exports= controller

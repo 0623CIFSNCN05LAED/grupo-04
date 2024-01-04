@@ -15,20 +15,23 @@ const uploadFile = multer({storage});
 
 const productsControllers = require("../controllers/productControllers");
 
+const check = require("../middlewares/user-Check")
+const productValidation = require("../validations/product-val")
+const productMiddleware = require("../middlewares/product-middle")
+
 // Todos los productos
 router.get("/productos", productsControllers.all)
 // Carrito/Tienda
 router.get("/productCart", productsControllers.carrito);
 // Creación de un producto
-router.get("/productos/crear/", productsControllers.create);
-router.post("/productos", uploadFile.single("image"),productsControllers.save); 
+router.get("/productos/crear/", check, productsControllers.create);
+router.post("/productos", uploadFile.single("image"), productValidation, productMiddleware, productsControllers.save); 
 // Detalle de un producto en particular
 router.get("/productos/:id", productsControllers.product)
 // Edición de UN producto
-router.get("/productos/editar/:id", productsControllers.edit)
+router.get("/productos/editar/:id", check, productsControllers.edit)
 router.put("/productos/:id", productsControllers.update)
 // Eliminar un producto
-// Modificar todo el productDetails para visualizar el producto a editar
-router.delete("/productos/:id",productsControllers.delete)
+router.get("/productos/delete/:id", check, productsControllers.delete)
 
 module.exports= router;

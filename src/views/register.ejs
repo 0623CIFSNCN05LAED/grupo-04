@@ -142,9 +142,9 @@
                 </div>
                 
                 <div class="flex  flex-wrap w-50 jcl">
-                    <label for="phone_number" class="fs-16"> Teléfono</label>
+                    <label for="phone" class="fs-16"> Teléfono</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
-                       <input type="tel" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old? old.phone : null %>">
+                       <input type="text" name="phone_number" id="phone_number" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese numero telefonico" value="<%= locals.old? old.phone_number : null %>">
                     <% if (locals.errors && errors.phone_number) { %>
                         <%= errors.phone_number.msg %>
                     <% } %> 
@@ -167,9 +167,9 @@
                 <div class="flex f-ss fw-400">
                     <input type="submit" class="fw-400 p-1 fs-16 bcg-darkgrey mr-1 border-radius w-50 ml-1">
                     
-                    <input type="checkbox" name="recuerdame" id="recuerdame"> <span
+                    <!-- <input type="checkbox" name="recuerdame" id="recuerdame"> <span
                         class="fw-400 f-ss fs-12 p-1 justify-center my-auto">
-                        Recuerdame</span>
+                        Recuerdame</span> -->
                 </div>
                 <!-- <a href="#">Olvidaste tu contraseña</a> -->
 
