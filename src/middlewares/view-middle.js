@@ -3,9 +3,9 @@ const {Users}= require("../database/models")
 const viewMiddleware = (req, res, next) => {
     res.locals.logged = false
 
-    const emailCookie = req.cookies.userCookie
+    /* const emailCookie = req.cookies.userCookie */
     const userFromCookie = Users.findOne({where: {email: req.cookies.userCookie || null}})
-    console.log(req.cookies.userCookie)
+    /* console.log(req.cookies.userCookie) */
 
     if(!userFromCookie == null){
        req.session.userData= userFromCookie 

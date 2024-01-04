@@ -31,7 +31,7 @@ const productServices = {
             id_user: body.id_user,
         })
     },
-    updateProduct: (id) => {
+    updateProduct: (id, body) => {
         return Products.update({
             id: body.id,
             name: body.name,

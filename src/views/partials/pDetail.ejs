@@ -1,4 +1,3 @@
-
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
     <div class="item">
       <img class="img-thumbnail" src="/images/products/<%= product.image%>"/>
@@ -10,13 +9,16 @@
       <h4 class="product-name"><%= product.name%></h4>
     </div>
     </a>
-    <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
-      <button class="btn btn-success add-to-cart" type="submit" href="../productCart.ejs">Añadir al carrito</button>
-    </div>
+    <div>
+        <%= product.description %>
+      </div>
       <div class="price">
       <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
         $<%= product.price %>
       </div>
+      <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+      <button class="btn btn-success add-to-cart" type="submit" href="../productCart.ejs">Añadir al carrito</button>
+    </div>
     </div>
   </div>
 </div>

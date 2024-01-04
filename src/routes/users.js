@@ -23,8 +23,8 @@ const registerMiddleware = require("../middlewares/register-middle")
 const userInDB = require("../middlewares/user-DB")
  
 const loginValidation = require("../validations/login-val")
-const loginMiddleware = require("../middlewares/login-middle")
-const authMiddleware = require("../middlewares/authorize-middle");
+const loginMiddleware = require("../middlewares/login-middle") 
+
 
 router.get("/usuarios/login", guestMiddleware, usersControllers.login)
 router.post("/usuarios/login",  loginValidation, loginMiddleware, usersControllers.success) 
@@ -34,9 +34,6 @@ router.post("/usuarios/registro",  uploadFile.single("image"), registerValidatio
 
 router.get("/usuarios", usersControllers.welcome)
 
-/* router.get("/usuarios/admin", authMiddleware, (req, res) => {
-   res.send("Hola Admin");
- }); */
 
 router.get("/usuarios/logout", usersControllers.logout)
 

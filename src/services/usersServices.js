@@ -17,7 +17,12 @@ const usersServices = {
             phone_number: body.phone_number,
             image: body.image,
         })
-    }
+    },
+    deleteUser: (id) => {
+        return Users.destroy({
+            where:{ id : id }
+        })
+    },
 }
 
 module.exports = usersServices

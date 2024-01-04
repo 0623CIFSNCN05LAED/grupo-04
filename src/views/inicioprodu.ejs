@@ -30,9 +30,24 @@
         </p>
         <% product.forEach(product => { %>
           <%- include("partials/producto", {product}) %>
-          <a href="#" class="boton verde">editar</a>
+          <% if (locals.logged) { %>
+            <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+              <button class="btn btn-success add-to-cart" type="button"><a href="/productos/editar/<%= product.id %>" >Editar</a></button>
+            </div>
+           <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+            <button class="btn btn-success add-to-cart" type="button"><a href="/productos/delete/<%= product.id %>">Eliminar</a></button> 
+          </div>
           
+          <% } %>
         <% }) %>
+        <% if (locals.logged) { %>
+          <br>
+          <br>
+          <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+            <button class="btn btn-success add-to-cart" type="button"><a href="/productos/crear/"><h3>Seguir creando</h3></a></button>
+          </div>
+        <% } %>
+        
 </main>
 
 
