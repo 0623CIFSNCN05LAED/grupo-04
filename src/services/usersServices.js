@@ -1,6 +1,9 @@
 const { Users } = require("../database/models");
 
 const usersServices = {
+    getAll: () => {
+        return Users.findAll()
+    },
     findByEmail: (user) => {
         return Users.findOne({
             where: {email: user}

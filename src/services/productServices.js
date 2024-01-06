@@ -17,6 +17,14 @@ const productServices = {
             price: product.price,   
         }))
     },
+    getProductAndCount: ({
+        pageSize, offset
+    }) => {
+      return Products.findAndCountAll({
+        limit: pageSize,
+        offset: offset
+      })  
+    },
     createProduct: (body) => {
         return Products.create({
             id: body.id,
