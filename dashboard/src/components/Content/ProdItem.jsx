@@ -1,0 +1,39 @@
+import { Component } from "react";
+import PropTypes from 'prop-types'
+
+class ProdItem extends Component{
+    constructor({match}){
+        super()
+        const {name} = match.params
+
+        this.state = {
+            name: name,
+          };
+        }
+        
+    componentDidUpdate() {
+        const { name } = this.props.match.params;
+        console.log({name})
+        if (this.state.name !== name) {
+          this.setState({
+            name: name,
+          });
+        }
+    }
+    render(){
+        return(
+            <h3>{this.state.name}</h3>
+        )
+    }
+}
+
+ProdItem.propTypes = {
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            name: PropTypes.string.isRequired,
+        }),
+    }).isRequired,
+};
+
+export default ProdItem
+
