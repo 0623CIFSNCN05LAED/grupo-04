@@ -96,11 +96,20 @@
           <span class="errorMsg" id="weightError"></span>
       </div>
 
-      <!-- Categoría -->
-      <div class="category">
-          <label for="category">Categoría:</label>
-          <input type="text" id="category" name="category" value="<%= product.category %>">
-          <span class="errorMsg" id="categoryError"></span>
+      <!-- Marca -->
+      <div class="brand">
+          <label for="brand">Marca:</label>
+          <select name="brand" id="brand">
+            <option value="">Elegí una marca</option>
+              <% 
+                let brands = ["Royal Canin", "Excellent", "Pedigree", "Cat Chow", "Dog Chow", "Eukanuba"]
+              %>
+              <% for (const oneBrand of brands) {%>
+                <option value="<%= oneBrand%>" 
+                <%=locals.old && (oneBrand === old.brand)? "selected": null %>> <%= oneBrand %></option>
+                <% }%>
+          </select>
+          <span class="errorMsg" id="brandError"></span>
       </div>
 
       <!-- Imagen -->

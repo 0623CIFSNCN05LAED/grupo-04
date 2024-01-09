@@ -100,14 +100,23 @@
             <span class="errorMsg" id="weightError"></span>
         </div>
 
-        <!-- Categoría -->
-        <div class="category">
-            <label for="category">Categoría:</label>
-            <input type="text" id="category" name="category" value="<%= locals.old? old.category : null %>">
-            <% if (locals.errors && errors.category) { %>
-              <%= errors.category.msg %>
-          <% } %>
-          <span class="errorMsg" id="categoryError"></span>
+        <!-- Marca -->
+        <div class="brand">
+            <label for="brand">Marca:</label>
+            <select id="brand" name="brand" value="<%= locals.old? old.brand : null %>">
+              <option value="">Elegí una marca</option>
+              <% 
+                let brands = ["Royal Canin", "Excellent", "Pedigree", "Cat Chow", "Dog Chow", "Eukanuba", "Pro Plan"]
+              %>
+              <% for (const oneBrand of brands) {%>
+                <option value="<%= oneBrand%>" 
+                <%=locals.old && (oneBrand === old.brand)? "selected": null %>> <%= oneBrand %></option>
+                <% }%>
+            </select>
+            <% if (locals.errors && errors.brand) { %>
+              <%= errors.brand.msg %>
+          <% } %> 
+          <span class="errorMsg" id="brandError"></span>
         </div>
 
         <!-- Imagen -->
@@ -121,8 +130,8 @@
         <div class="description">
           <label for="description">Descripción:</label>
           <textarea id="description" name="description" rows="4" value="<%= locals.old? old.description : null %>"></textarea>
-          <% if (locals.errors && errors.category) { %>
-            <%= errors.category.msg %>
+          <% if (locals.errors && errors.description) { %>
+            <%= errors.description.msg %>
         <% } %>
           <span class="errorMsg" id="descriptionError"></span>
         </div>

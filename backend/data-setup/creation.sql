@@ -21,7 +21,7 @@ CREATE TABLE products(
 	name VARCHAR(100) not null,
 	taste VARCHAR(100),
 	weight DECIMAL,
-	category VARCHAR(100),
+	brand VARCHAR(100),
 	description TEXT,
 	age VARCHAR(100),
 	price INT,

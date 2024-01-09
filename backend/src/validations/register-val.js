@@ -1,31 +1,40 @@
-const { body } = require("express-validator")
-const path = require("path")
+const { check } = require("express-validator")
 
 const registerValidation = [
-    body("username")
+    check("username")
     .notEmpty().withMessage("Debe completar este campo")
     .isLength({min:4}).withMessage("El nombre de usuario debe tener más de 3 caracteres")
     .bail(),
 
-    body("email")
+    check("email")
     .notEmpty().withMessage("Debe completar este campo")
     .isEmail().withMessage("Debe ingresar un email válido"),
 
-    body("password")
+    check("password")
     .notEmpty().withMessage("Debe completar este campo")
     .isLength({min:4}).withMessage("Es seguro que la contraseña sobrepase los 4 caracteres"),
 
-    body("name")
+    check("passwordconf")
+    .notEmpty().withMessage("Debe completar este campo").trim()
+    .custom((value, { req }) => {
+        const { password } = req.body;
+        if (value !== password) {
+          throw new Error("La contraseña debe ser igual en ambos campos");
+        }
+        return true;
+    }),
+
+    check("name")
     .notEmpty().withMessage("Debe completar este campo"),
 
-    body("dni")
+    check("dni")
     .notEmpty().withMessage("Debe completar este campo")
     .isNumeric(),    
 
-    body("home")
+    check("home")
     .notEmpty().withMessage("Debe completar este campo"),
 
-    body("phone_number")
+    check("phone_number")
     .notEmpty().withMessage("Debe completar este campo")
 ]
 

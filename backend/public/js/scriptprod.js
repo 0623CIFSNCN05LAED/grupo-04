@@ -15,7 +15,7 @@ const validations = [
         message: "Debe completar el campo"
     },
     {
-        field: "category",
+        field: "brand",
         check: (input) => !input.value,
         message: "Debe completar el campo"
     },

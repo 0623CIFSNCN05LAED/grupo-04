@@ -116,8 +116,16 @@
     </div>
  </div>
  <div class="col text-center">
+  <% if (locals.logged) { %>
+   <a href="./productos"><h2>Productos</h2></a>
+  <% } %>
+   
   
-  <a href="./productos"><h2>Visite los productos</h2></a>
+  <% product.forEach(product => { %>
+    
+  <%- include("partials/producto", {product}) %>
+  
+  <% }) %>
  
 </div>
 

@@ -3,7 +3,9 @@ const productServices = require("../services/productServices");
 
 const controller = {
   home: (req, res) => {
-    res.render("home");
+    productServices.getAll().then((product)=>{
+      res.render("home", {product});
+  })
   },  
   detallesDeProducto: (req, res) => {
   res.render("productDetails");

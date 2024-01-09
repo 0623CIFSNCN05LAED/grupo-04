@@ -25,7 +25,7 @@ const controller = {
             name: req.body.name,
             taste: req.body.taste,
             weight: req.body.weight,
-            category: req.body.category,
+            brand: req.body.brand,
             image: req.file ? req.file.filename : "default-image.png",
             description: req.body.description,
             age: req.body.age,

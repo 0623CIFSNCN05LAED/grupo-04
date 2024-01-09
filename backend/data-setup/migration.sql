@@ -1,4 +1,4 @@
-INSERT INTO products (id, name, taste, weight, category, description, age, price, image)
+INSERT INTO products (id, name, taste, weight, brand, description, age, price, image)
 VALUES (UUID(), "Comida gatos", "Pollo", 5, "Adultos castrados", "Comida", "Adultos", 4569, "1703892999176_img_.jpg");
 
 INSERT INTO users(id, username, email, password, name, dni, home, phone_number, image)

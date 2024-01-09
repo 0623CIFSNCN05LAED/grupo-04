@@ -10,13 +10,17 @@
       <h4 class="product-name"><%= product.name%></h4>
     </div>
     </a>
-    <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
-      <button class="btn btn-success add-to-cart" type="submit" href="../productCart.ejs">Añadir al carrito</button>
+    <% if (locals.logged) { %>
+     <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+      <button class="btn btn-success add-to-cart" type="button"><a href="../productCart" >Añadir al carrito</a></button>
     </div>
-      <div class="price">
+    <div class="price">
       <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
         $<%= product.price %>
       </div>
+    <% } %>
+    
+      
     </div>
   </div>
 </div>

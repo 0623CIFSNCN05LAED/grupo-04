@@ -1,10 +1,11 @@
 const authorize = (req, res, next) => {
-    const { user } = req.query;
-    const usuariosAutorizados = ["azu24", "nadia"];
-    if (usuariosAutorizados.includes(user)) {
-      return next();
+    const user = req.session.userData;
+    console.log(user)
+    const usuariosAutorizados = ["azu@gmail.com"];
+    if (!usuariosAutorizados.includes(user.email)) {
+      return res.render("home");
     }
-    return res.send("No tienes los privilegios para ingresar");
+    return next();
   }
 
 module.exports = authorize

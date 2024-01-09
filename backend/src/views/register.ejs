@@ -109,6 +109,17 @@
                 </div>
 
                 <div class="flex  flex-wrap w-50 jcl">
+                    <label for="passwordconf" class="fs-16"> Confirme su contraseña</label>
+                    <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
+                       <input type="password" name="passwordconf" id="passwordconf" class="w-100 fs-16 fc-grey" placeholder="Ingrese contraseña nuevamente" value="<%= locals.old && old.passwordconf %>">
+                        <% if (locals.errors && errors.passwordconf) { %>
+                            <%= errors.passwordconf.msg %>
+                        <% } %> 
+                    </p>
+                    <span class="errorMessage" id="passwordconfError"></span>
+                </div>
+
+                <div class="flex  flex-wrap w-50 jcl">
                     <label for="name" class="fs-16"> Nombre y apellido</label>
                     <p class="flex f-direction-col flex-wrap w-80 mg-x-auto">
                       <input type="text" name="name" id="name" class="w-100 fs-1 fc-darkgrey" placeholder="Ingrese nombre y apellido" value="<%= locals.old? old.name : null %>">
@@ -166,13 +177,8 @@
 
                 <div class="flex f-ss fw-400">
                     <input type="submit" class="fw-400 p-1 fs-16 bcg-darkgrey mr-1 border-radius w-50 ml-1">
-                    
-                    <!-- <input type="checkbox" name="recuerdame" id="recuerdame"> <span
-                        class="fw-400 f-ss fs-12 p-1 justify-center my-auto">
-                        Recuerdame</span> -->
                 </div>
-                <!-- <a href="#">Olvidaste tu contraseña</a> -->
-
+                
             </form>
         </div>
 

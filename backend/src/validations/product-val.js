@@ -12,7 +12,7 @@ const productValidation = [
     check("weight")
     .notEmpty().withMessage("Debe completar este campo"),
 
-    check("category")
+    check("brand")
     .notEmpty().withMessage("Debe completar este campo"),
 
     check("description")

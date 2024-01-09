@@ -14,7 +14,7 @@ class LastProd extends Component{
       return res.json()
     }).then((json)=>{
       const productos= json.data
-      const last = productos.pop()
+      const last = productos.shift()
       console.log("productos", last)
       this.setState({product: last})
     })
@@ -40,7 +40,7 @@ class LastProd extends Component{
                 className="list-group-item list-group-item-action text-center">
                 <p>Sabor: {this.state.product.taste}</p>
                 <p>Peso: {this.state.product.weight}</p>
-                <p>Categoría: {this.state.product.category}</p>
+                <p>Marca: {this.state.product.brand}</p>
                 <p>Descripción: {this.state.product.description}</p>
                 <p>Precio: ${this.state.product.price}</p>
             </div>

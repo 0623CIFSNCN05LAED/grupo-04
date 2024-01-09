@@ -18,7 +18,7 @@ const controller = {
         } 
         usersServices.createUser(user).then((user)=>{
             req.session.userData = user
-            res.render("welcome", {user})
+            res.render("login", {user})
         })
     },
     login: (req, res) => { 
