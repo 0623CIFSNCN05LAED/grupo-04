@@ -24,7 +24,7 @@ router.get("/productos", productsControllers.all)
 // Carrito/Tienda
 router.get("/productCart", productsControllers.carrito);
 // Creación de un producto
-router.get("/productos/crear/", check, productsControllers.create);
+router.get("/productos/crear/",check, productsControllers.create);
 router.post("/productos", uploadFile.single("image"), productValidation, productMiddleware, productsControllers.save); 
 // Detalle de un producto en particular
 router.get("/productos/:id", productsControllers.product)

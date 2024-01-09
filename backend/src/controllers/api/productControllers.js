@@ -1,6 +1,6 @@
 const productServices = require("../../services/productServices")
 
-const pageSize = 3
+const pageSize = 6
 
 const controller = {
     // Todos los productos

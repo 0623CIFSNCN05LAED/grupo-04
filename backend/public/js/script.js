@@ -15,6 +15,11 @@ const validations = [
     message: "Debe contener al menos cuatro caracteres",
   },
   {
+    field: "passwordconf",
+    check: (input) => input.value.length <= 4,
+    message: "Debe contener al menos cuatro caracteres",
+  },
+  {
     field: "name",
     check: (input) => !input.value,
     message: "Debe completar el campo",

@@ -18,7 +18,6 @@
 
     </head>
     <body>
-
       <!-- header -->
       <%-include("partials/header") %>  
    
@@ -30,7 +29,7 @@
         </p>
         <% product.forEach(product => { %>
           <%- include("partials/producto", {product}) %>
-          <% if (locals.logged) { %>
+          <% if (locals.userData.email == "azu@gmail.com") { %>
             <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
               <button class="btn btn-success add-to-cart" type="button"><a href="/productos/editar/<%= product.id %>" >Editar</a></button>
             </div>
@@ -40,12 +39,15 @@
           
           <% } %>
         <% }) %>
-        <% if (locals.logged) { %>
+        <% if (locals.userData.email == "azu@gmail.com") { %>
           <br>
           <br>
           <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
             <button class="btn btn-success add-to-cart" type="button"><a href="/productos/crear/"><h3>Seguir creando</h3></a></button>
           </div>
+        <% } %>
+        <% if (!locals.userData.email == "azu@gmail.com"){ %>
+          <div>Prueba iniciar sesión antes de agregar cosas al carrito</div>
         <% } %>
         
 </main>

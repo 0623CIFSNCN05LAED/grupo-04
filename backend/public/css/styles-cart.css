@@ -2,18 +2,18 @@
 
 /* header */
 a:visited{
-    color: #fff;
-  }
-  a:hover {
-    color: #F1915D;
-    text-decoration: none;
-  }
-   a {
-    color: #fff;
-    font-size: 14px;
-    transition-duration: 0.2s;
-   
-  }
+  color: #fff;
+}
+a:hover {
+  color: #F1915D;
+  text-decoration: none;
+}
+ a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+ 
+}
   
   *, *:before, *:after {
     -moz-box-sizing:border-box;
@@ -876,8 +876,7 @@ a.active {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   color: #333;
   font-weight: normal;
   margin: 1.75rem 0 1rem 0;
@@ -1146,35 +1145,35 @@ nav li {
 
 /* footer */
 footer {
-    background: #06142E;
-    background: -webkit-linear-gradient(59deg,#384358 ,#06142E );
-    background: linear-gradient(59deg, #384358, #06142E);
-    color: white;
-    margin-top:100px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  footer a {
-    color: #fff;
-    font-size: 14px;
-    transition-duration: 0.2s;
-  }
-  
-  footer a:hover {
-    color: #F1915D;
-    text-decoration: none;
-  }
-  
-  .copy {
-    font-size: 12px;
-    padding: 10px;
-    border-top: 1px solid #FFFFFF;
-  }
-  
-  .footer-middle {
-    padding-top: 2em;
-    color: white;
-  }
+  background: #06142E;
+  background: -webkit-linear-gradient(59deg,#384358 ,#06142E );
+  background: linear-gradient(59deg, #384358, #06142E);
+  color: #fff;
+  margin-top:100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #F1915D;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+}
   
   
   /*SOCİAL İCONS*/
